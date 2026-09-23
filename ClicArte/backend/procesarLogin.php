@@ -31,17 +31,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$rol = strtolower($usuario['Rol']);
 			
 			// TODOS LOS ROLES van al dashboard, el dashboard sabrá qué mostrar
-			header("Location: dashboard.php");
+			header("Location: ../dashboard.php");
 			exit;
 			
 		} else {
 			// Error de contraseña: redirige de vuelta a index.php con un mensaje
-			header("Location: index.php?error=Contraseña incorrecta");
+				   header("Location: ../index.php?error=Contraseña incorrecta");
 			exit;
 		}
 	} else {
 		// Error de correo: redirige de vuelta a index.php con un mensaje
-		header("Location: index.php?error=Correo no encontrado");
+		   header("Location: ../index.php?error=Correo no encontrado");
 		exit;
 	}
 	$stmt->close();
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 } else {
 	// Si alguien intenta acceder a este archivo directamente
-	header("Location: index.php");
+	header("Location: ../index.php");
 	exit;
 }
 ?>
