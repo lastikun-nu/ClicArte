@@ -11,7 +11,7 @@ El proceso de reconstrucción se realiza de forma progresiva, manteniendo el fun
 
 ## Plan de trabajo
 
-### 1. Separación inicial entre Frontend y Backend
+### 1. Separación inicial entre Frontend y Backend (Finished)
 
 Como primer paso, se realiza una revisión general del proyecto para identificar y separar, en la medida de lo posible, las partes correspondientes al **frontend** y al **backend**.
 
@@ -19,7 +19,7 @@ El objetivo es conseguir una estructura más clara y facilitar el trabajo poster
 
 ---
 
-### 2. Revisión del Backend
+### 2. Revisión del Backend (Finished)
 
 Una vez realizada la separación inicial, se revisa el backend para localizar posibles elementos de presentación que no deberían encontrarse directamente dentro de esta parte, como código **HTML o CSS mezclado con la lógica PHP**.
 
