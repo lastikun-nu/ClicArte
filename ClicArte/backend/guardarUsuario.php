@@ -6,7 +6,7 @@ require 'conexion.php';
 // 1. Seguridad: Solo Profesores y Técnicos pueden añadir usuarios
 $rol_usuario_logueado = isset($_SESSION['rol']) ? strtolower($_SESSION['rol']) : '';
 if (!isset($_SESSION['id_usuario']) || ($rol_usuario_logueado != 'profesor' && $rol_usuario_logueado != 'tecnico')) {
-	header("Location: index.php?error=Acceso denegado");
+	header("Location: ../index.php?error=Acceso denegado");
 	exit;
 }
 
