@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestionar Ticket | ClicArte</title>
+        <link rel="stylesheet" href="../estilos.css">
+    </head>
+<body class="page-app">
+    <section class="dashboard-container">
+    <aside class="sidebar">
+        <header class="logopaginas">
+            <a href="../comun/dashboard.html">
+                <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte">
+            </a>
+        </header>
+            <nav class="sidebar-nav" aria-label="Navegación principal">
+            <a href="../comun/dashboard.html">
+                <img src="../IMGBLANCO/dashboard.png" alt="">Dashboard
+            </a>
+            <a href="tecnicoEquipos.html">
+                <img src="../IMGBLANCO/equipo.png" alt="">Equipos
+            </a>
+            <a href="../profe/gestionAlumnos.html">
+                <img src="../IMGBLANCO/alumno.png" alt="">Alumnos y profesores
+            </a>
+            <a href="../profe/gestionAulas.html">
+                <img src="../IMGBLANCO/aula.png" alt="">Aulas
+            </a>
+            <a href="tecnicoIncidencias.html" class="activo">
+                <img src="../IMGBLANCO/incidencia.png" alt="">Incidencias/Solicitudes
+            </a>
+            </nav>
+            <a href="../comun/index.html" class="logout">Cerrar Sesión</a>
+        </aside>
+        <main class="content-wrapper">
+            <header class="top-header">
+                <h1>Gestionar Ticket #</h1>
+                <span class="user-info">Técnico</span>
+            </header>
+            <section class="main-content">
+                <article class="form-container">
+                    <a href="tecnicoIncidencias.html" class="back-link">&larr; Volver al panel</a>
+                    <hr>
+                    <section class="ticket-details">
+                        <h3>Descripción del Usuario</h3>
+                        <p><strong>Usuario:</strong> #</p>
+                        <p><strong>Equipo:</strong> #</p>
+                        <p><strong>Fecha de inicio:</strong> #</p>
+                        <p><strong>Descripción:</strong> #</p>
+                    </section>
+                    <form action="#" method="post" class="form-gestion">
+                        <section class="form-grid">
+                            <p><label for="estado">Estado del Ticket:</label>
+                                <select id="estado" name="estado">
+                                    <option>En curso</option>
+                                    <option>En espera</option>
+                                    <option>Finalizado</option>
+                                </select>
+                            </p>
+                            <p><label for="tecnico">Técnico Asignado:</label>
+                                <select id="tecnico" name="tecnico">
+                                    <option>#</option>
+                                </select>
+                            </p>
+                        </section>
+                        <p class="full-width">
+                            <label for="comentario">Comentarios del Técnico:</label>
+                            <textarea id="comentario" name="comentario" rows="6"></textarea>
+                        </p>
+                        <button type="submit">Guardar Cambios</button>
+                    </form>
+                </article>
+            </section>
+        </main>
+    </section>
+</body>
+</html>
