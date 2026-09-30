@@ -94,3 +94,10 @@ El desarrollo se realiza de forma progresiva utilizando **Git**, registrando los
 La documentación también evoluciona junto con el proyecto, reflejando los principales cambios y decisiones tomadas durante el proceso.
 
 De esta manera, tanto el código como la documentación avanzan de forma paralela durante el desarrollo.
+
+
+## Bibliografia
+
+https://www.w3school.com.cn/
+https://www.w3schools.com/
+https://chatgpt.com/
