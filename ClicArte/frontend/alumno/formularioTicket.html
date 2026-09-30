@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nueva Incidencia | ClicArte</title>
+        <link rel="stylesheet" href="../estilos.css">
+    </head>
+<body class="page-app">
+    <section class="dashboard-container">
+        <aside class="sidebar">
+            <header class="logopaginas">
+                <a href="../comun/dashboard.html">
+                    <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte">
+                </a>
+            </header>
+            <nav class="sidebar-nav" aria-label="Navegación principal">
+            
+            <a href="../comun/dashboard.html">
+                <img src="../IMGBLANCO/dashboard.png" alt="">Dashboard</a>
+            <a href="misEquipos.html">
+                    <img src="../IMGBLANCO/equipo.png" alt="">Equipos</a>
+            <a href="misIncidencias.html">
+                    <img src="../IMGBLANCO/grafico-de-barras.png" alt="">Mi Historial</a>
+            <a href="formularioTicket.html" class="activo">
+                    <img src="../IMGBLANCO/incidencia.png" alt="">Incidencias/Solicitudes</a>
+            </nav>
+            <a href="../comun/index.html" class="logout">Cerrar Sesión</a>
+        </aside>
+        <main class="content-wrapper">
+            <header class="top-header">
+                <h1>Nueva Incidencia</h1>
+                <span class="user-info">Usuario</span>
+            </header>
+            <section class="main-content">
+                <article class="form-card">
+                <h2>Detalles del problema</h2>
+                    <form action="#" method="post">
+                        <p class="form-group">
+                            <label for="tipo">¿Qué necesitas?</label>
+                            <select id="tipo" name="tipo">
+                                <option>Reportar una Incidencia</option>
+                                <option>Hacer una Solicitud</option>
+                            </select>
+                        </p>
+                        <p class="form-group">
+                            <label for="equipo">Equipo afectado:</label>
+                            <select id="equipo" name="equipo">
+                                <option>#</option>
+                            </select>
+                        </p>
+                        <p class="form-group">
+                            <label for="descripcion">Descripción detallada:</label>
+                            <textarea id="descripcion" name="descripcion" rows="6" placeholder="Describe el problema..."></textarea>
+                        </p>
+                        <button type="submit" class="btn-submit">Enviar Ticket</button>
+                    </form> 
+                </article>
+            </section>
+        </main>
+    </section>
+</body>
+</html>
