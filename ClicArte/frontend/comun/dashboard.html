@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | ClicArte</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+<body class="page-app">
+    <div class="app-shell">
+        <aside class="sidebar" aria-label="Navegación principal">
+            <a class="brand" href="dashboard.html">
+                <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte">
+            </a>
+            <nav class="primary-nav" aria-label="Menú principal">
+                <a href="dashboard.html" class="nav-link activo">
+                    <img src="../IMGBLANCO/dashboard.png" alt="">
+                    <span>Dashboard</span>
+                </a>
+                <a href="../alumno/misEquipos.html" class="nav-link">
+                    <img src="../IMGBLANCO/equipo.png" alt="">
+                    <span>Equipos</span>
+                </a>
+                <a href="../alumno/misIncidencias.html" class="nav-link">
+                    <img src="../IMGBLANCO/grafico-de-barras.png" alt="">
+                    <span>Mi Historial</span>
+                </a>
+                <a href="../alumno/formularioTicket.html" class="nav-link">
+                    <img src="../IMGBLANCO/incidencia.png" alt="">
+                    <span>Incidencias/Solicitudes</span>
+                </a>
+            </nav>
+            <a href="../comun/index.html" class="nav-link logout">Cerrar Sesión</a>
+        </aside>
+        <div class="content-wrapper">
+            <header class="top-header">
+                <div>
+                    <p class="eyebrow">ClicArte</p>
+                    <h1>Tu actividad en ClicArte</h1>
+                </div>
+                <p class="user-info">Usuario</p>
+            </header>
+            <main class="main-content">
+                <h2>Bienvenido, #</h2>
+                <section class="dashboard-widgets">
+                    <article class="widget">
+                        <h3>Mi ordenador asignado</h3>
+                        <p>Equipo #</p>
+                        <p>Planta # Aula # Estado #</p>
+                    </article>
+                    <article class="widget">
+                        <h3>Mis Incidencias</h3>
+                        <p>Estado de tus incidencias y solicitudes.</p>
+                        <hr>
+                        <a href="../alumno/misIncidencias.html" class="button">Ver Mi Historial</a>
+                        <a href="../alumno/formularioTicket.html" class="button">Crear Nueva</a>
+                    </article>
+                    <article class="widget">
+                        <h3>Estado General del Centro</h3>
+                        <p>Equipos operativos: #</p>
+                        <p>Equipos con incidencias: #</p>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
