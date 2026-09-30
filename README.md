@@ -11,7 +11,7 @@ El proceso de reconstrucción se realiza de forma progresiva, manteniendo el fun
 
 ## Plan de trabajo
 
-### 1. Separación inicial entre Frontend y Backend (Finished)
+### 1. Separación inicial entre Frontend y Backend (Finished/Pablo)
 
 Como primer paso, se realiza una revisión general del proyecto para identificar y separar, en la medida de lo posible, las partes correspondientes al **frontend** y al **backend**.
 
@@ -19,7 +19,7 @@ El objetivo es conseguir una estructura más clara y facilitar el trabajo poster
 
 ---
 
-### 2. Revisión del Backend (Finished)
+### 2. Revisión del Backend (Finished/Nuno)
 
 Una vez realizada la separación inicial, se revisa el backend para localizar posibles elementos de presentación que no deberían encontrarse directamente dentro de esta parte, como código **HTML o CSS mezclado con la lógica PHP**.
 
@@ -29,7 +29,7 @@ Cuando una página necesita ser trasladada o reorganizada, se mantiene temporalm
 
 ---
 
-### 3. Revisión del Frontend
+### 3. Revisión del Frontend(Finished/Rodrigo)
 
 Después de revisar el backend, se comienza a trabajar principalmente sobre la parte frontend.
 
@@ -44,7 +44,7 @@ El objetivo es conseguir una estructura HTML más clara, legible y fácil de man
 
 ---
 
-### 4. Organización de la navegación
+### 4. Organización de la navegación(Finished/Rodrigo/Pablo)
 
 Una de las primeras tareas dentro del frontend consiste en revisar los diferentes archivos para localizar las barras de navegación (`nav`) que aparecen repetidas.
 
@@ -56,7 +56,7 @@ Esto también facilita futuras modificaciones, ya que un cambio realizado en el 
 
 ---
 
-### 5. Reconstrucción de la estructura HTML
+### 5. Reconstrucción de la estructura HTML(Finished/Nuno)
 
 También se revisan las páginas que no disponen de una estructura HTML suficientemente clara.
 
@@ -87,7 +87,7 @@ Con este proceso se pretende conseguir:
 
 ---
 
-## Git y documentación
+## Git y documentación(Finished/Pablo/Nuno/Rodrigo)
 
 El desarrollo se realiza de forma progresiva utilizando **Git**, registrando los diferentes cambios realizados durante la reconstrucción.
 
