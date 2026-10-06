@@ -1,0 +1,47 @@
+//Son los css de gestion aula(panel profesor)
+
+.aula-container {
+    margin-bottom: 25px;
+
+    background-color: var(--color-surface);
+
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+}
+
+.aula-header {
+    padding: 15px 20px;
+
+    background-color: #e8eef2;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.aula-header h2 {
+    margin: 0;
+
+    color: var(--color-ink);
+}
+
+.aula-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    padding: 20px;
+}
+
+.aula-columna h3 {
+    margin-top: 0;
+    padding-bottom: 8px;
+
+    color: var(--color-brand);
+
+    border-bottom: 2px solid var(--color-border);
+}
+
+@media (max-width: 760px) {
+    .aula-body {
+        grid-template-columns: 1fr;
+    }
+}
