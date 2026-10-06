@@ -1,0 +1,41 @@
+//Juntamos css de mensaje y estado(Son diferentes componentes pero tienen mismo funciona)
+
+.mensaje.success { 
+    background-color: #D4EDDA; 
+    color: #155724; 
+}
+
+.mensaje.error { 
+    background-color: #F8D7DA; 
+    color: #721C24; 
+}
+
+.mensaje {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.estado-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.bg-finalizado { 
+    background-color: #28a745; 
+}
+
+.bg-espera { 
+    background-color: #ffc107; 
+    color: #333; 
+}
+
+.bg-rojo { 
+    background-color: #dc3545; 
+}
