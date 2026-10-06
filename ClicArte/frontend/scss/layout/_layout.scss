@@ -1,0 +1,234 @@
+/*Este parte incluido parte 
+app-shell
+sidebar
+content-wrapper
+top-header
+main-content
+page-section
+section-header
+*/
+
+.app-shell {
+    display: grid;
+    grid-template-columns: minmax(210px, 250px) minmax(0, 1fr);
+    min-height: 100vh;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    width: auto;
+    min-height: 100vh;
+    padding: 24px 16px;
+    background: var(--color-nav);
+    box-shadow: none;
+}
+
+.logopaginas {
+    display: block;
+    padding: 4px 10px 24px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.logopaginas img {
+    display: block;
+    width: min(150px, 100%);
+    height: auto;
+}
+
+.sidebar-nav {
+    display: grid;
+    gap: 6px;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    min-height: 44px;
+    margin: 0;
+    padding: 11px 12px;
+
+    border-radius: var(--radius-sm);
+
+    color: #edf2f5;
+    text-decoration: none;
+}
+
+.sidebar-nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.sidebar-nav a.activo {
+    background: var(--color-brand);
+    color: #172330;
+}
+
+.sidebar-nav a img {
+    height: 1.2em;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.sidebar .logout,
+.page-app .nav-link.logout {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    margin-top: auto;
+    padding: 11px 12px;
+    border-radius: var(--radius-sm);
+    color: #ffc46e;
+    text-decoration: none;
+}
+
+.sidebar .logout:hover,
+.page-app .nav-link.logout:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.page-app .app-shell {
+    display: grid;
+    grid-template-columns: minmax(220px, 250px) minmax(0, 1fr);
+    min-height: 100vh;
+}
+
+.page-app .sidebar {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    width: auto;
+    min-height: 100vh;
+    padding: 24px 16px;
+    background: var(--color-nav);
+    box-shadow: none;
+}
+
+.page-app .brand {
+    display: block;
+    margin-bottom: 18px;
+    text-decoration: none;
+}
+
+.page-app .brand img {
+    display: block;
+    width: min(150px, 100%);
+    height: auto;
+}
+
+.page-app .primary-nav {
+    display: grid;
+    gap: 6px;
+}
+
+.page-app .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    margin: 0;
+    padding: 11px 12px;
+    border-radius: var(--radius-sm);
+    color: #edf2f5;
+    text-decoration: none;
+}
+
+.page-app .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.page-app .nav-link.activo {
+    background: var(--color-brand);
+    color: #172330;
+}
+
+.page-app .nav-link img {
+    height: 1.2em;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.page-app .nav-link.logout {
+    margin-top: auto;
+    color: #ffc46e;
+}
+
+.page-app .nav-link.logout:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.content-wrapper { 
+    min-width: 0; 
+    height: auto; 
+    min-height: 100vh; 
+    overflow: visible; 
+}
+
+.top-header {
+    min-height: 88px;
+    height: auto;
+    padding: 20px clamp(18px, 4vw, 48px);
+    background: var(--color-surface);
+    color: var(--color-ink);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: none;
+}
+
+.top-header h1 { 
+    color: var(--color-ink); 
+    font-size: clamp(1.35rem, 2vw, 1.8rem); 
+}
+
+.eyebrow { 
+    margin: 0 0 4px; 
+    color: var(--color-brand-dark); 
+    font-size: .75rem; 
+    font-weight: 700; 
+    letter-spacing: .08em; 
+    text-transform: uppercase; 
+}
+
+.user-info { 
+    margin: 0; 
+    color: var(--color-muted); 
+}
+
+.main-content { 
+    padding: clamp(18px, 4vw, 48px); 
+    background: var(--color-surface-alt); 
+}
+
+.page-section { 
+    max-width: 1280px; 
+    margin: 0 auto; 
+}
+
+.section-header { 
+    display: flex; 
+    align-items: end; 
+    justify-content: space-between; 
+    gap: 24px; 
+    margin-bottom: 24px; 
+}
+
+.section-header h2 { 
+    margin: 0 0 8px; 
+    color: var(--color-ink); 
+}
+
+.section-header p { 
+    margin: 0; 
+    color: var(--color-muted); 
+}
+
+.section-header .button { 
+    flex: 0 0 auto; 
+    margin: 0; 
+}
