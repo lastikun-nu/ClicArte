@@ -1,0 +1,44 @@
+//Este parte incluido tablas de pc y movil
+
+
+//visual PC (pantalla grande)
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--color-border);
+    margin-top: 20px;
+    background-color:var(--color-surface);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, 
+td {
+    border: 1px solid #ECF0F1; 
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #BDC3C7; 
+    font-weight: bold;
+    color: var(--color-ink);
+}
+
+tr:nth-child(even) {
+    background-color: #F9F9F9;
+}
+
+//visual movil (pantalla pequeña)
+
+.table-container { 
+    width: 100%; 
+    overflow-x: auto; 
+    border-radius: var(--radius-md); 
+    box-shadow: var(--shadow-soft); 
+}
+.table-container table { 
+    min-width: 720px; 
+    margin: 0; 
+    box-shadow: none; 
+}
+
