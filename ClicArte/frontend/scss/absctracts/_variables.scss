@@ -1,0 +1,28 @@
+// Variables para reutilizar en todo el proyecto.
+$color-ink: #243447;
+$color-muted: #607080;
+$color-surface: #ffffff;
+$color-surface-alt: #f4f7f9;
+$color-border: #d9e1e7;
+$color-brand: #e58a1f;
+$color-brand-dark: #b86508;
+$color-nav: #243447;
+
+$shadow-soft: 0 8px 24px rgba(36, 52, 71, 0.08);
+
+$radius-sm: 6px;
+$radius-md: 10px;
+
+:root {
+    --color-ink: #{$color-ink};
+    --color-muted: #{$color-muted};
+    --color-surface: #{$color-surface};
+    --color-surface-alt: #{$color-surface-alt};
+    --color-border: #{$color-border};
+    --color-brand: #{$color-brand};
+    --color-brand-dark: #{$color-brand-dark};
+    --color-nav: #{$color-nav};
+    --shadow-soft: #{$shadow-soft};
+    --radius-sm: #{$radius-sm};
+    --radius-md: #{$radius-md};
+}
