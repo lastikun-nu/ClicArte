@@ -1,0 +1,68 @@
+// Este parte incluido css de los botones, entre los botones hay diferentes tipos de botones.
+@mixin button-base($bg-color, $text-color: #fff, $radius: 5px) {
+    display: inline-block;
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: $radius;
+    margin-bottom: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+@mixin button-variant($bg-color, $hover-color) {
+    background-color: $bg-color;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+a.button,
+a.button.success {
+    @include button-base(#2ECC71);
+}
+
+a.button:hover {
+    background-color: #27AE60;
+}
+
+.btn-login {
+    width: 100%;
+    @include button-base($color-brand, #fff, 30px);
+    padding: 15px;
+    font-size: 16px;
+    margin-top: 10px;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: $color-brand-dark;
+        transform: translateY(-2px);
+    }
+}
+
+.btn-consultar {
+    color: #005a9c;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px 20px;
+    @include button-base($color-brand);
+    border-radius: 5px;
+    font-size: 16px;
+
+    &:hover {
+        background-color: $color-brand-dark;
+    }
+}
+
