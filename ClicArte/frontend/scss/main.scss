@@ -1,0 +1,12 @@
+//Relaciona todos archivos de scss
+@use "abstracts/variables";
+@use "base/base";
+@use "layout/layout";
+@use "components/buttons";
+@use "components/forms";
+@use "components/messages";
+@use "components/tables";
+@use "pages/login";
+@use "pages/dashboard";
+@use "pages/aulas";
+@use "pages/equipos";
