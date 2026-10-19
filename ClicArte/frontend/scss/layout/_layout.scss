@@ -232,3 +232,63 @@ section-header
     flex: 0 0 auto; 
     margin: 0; 
 }
+
+
+/* Botón para desplegar y ocultar el menú */
+.sidebar-toggle {
+    display: block;
+    width: 42px;
+    height: 42px;
+    margin: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--color-brand);
+    color: #1E2530;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Transición del menú */
+.sidebar-menu {
+    transition: width 0.3s ease, min-width 0.3s ease;
+}
+
+/* Estado contraído */
+.sidebar-menu.sidebar-collapsed {
+    width: 70px;
+    min-width: 70px;
+    overflow: hidden;
+    padding: 12px 4px;
+}
+
+.page-app .app-shell.sidebar-collapsed {
+    grid-template-columns: 70px minmax(0, 1fr);
+}
+
+.sidebar-menu.sidebar-collapsed .sidebar-toggle {
+    margin: 12px auto;
+}
+
+.sidebar-collapsed .logopaginas {
+    display: none;
+}
+
+/* Ocultar los nombres y dejar visibles los iconos */
+.sidebar-collapsed nav a,
+.sidebar-collapsed .sidebar-nav a {
+    font-size: 0;
+    white-space: nowrap;
+    justify-content: center;
+}
+
+.sidebar-collapsed .logout {
+    font-size: 0;
+}
+
+/* Mantener visibles los iconos */
+.sidebar-collapsed nav a img,
+.sidebar-collapsed .sidebar-nav a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
