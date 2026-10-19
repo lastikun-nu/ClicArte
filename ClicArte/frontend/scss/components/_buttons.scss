@@ -34,14 +34,14 @@ a.button:hover {
 
 .btn-login {
     width: 100%;
-    @include button-base(vars.$color-brand, #fff, 30px);
+    @include button-base(vars(--color-brand), #fff, 30px);
     padding: 15px;
     font-size: 16px;
     margin-top: 10px;
     text-transform: uppercase;
 
     &:hover {
-        background-color: vars.$color-brand-dark;
+        background-color: vars(--color-brand-dark);
         transform: translateY(-2px);
     }
 }
@@ -59,12 +59,12 @@ a.button:hover {
 .btn-submit {
     width: 100%;
     padding: 12px 20px;
-    @include button-base(vars.$color-brand);
+    @include button-base(vars(--color-brand));
     border-radius: 5px;
     font-size: 16px;
 
     &:hover {
-        background-color: vars.$color-brand-dark;
+        background-color: vars(--color-brand-dark);
     }
 }
 
