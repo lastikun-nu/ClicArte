@@ -40,3 +40,70 @@
         grid-template-columns: 1fr;
     }
 }
+
+
+/* MENÚ LATERAL DESPLEGABLE*/
+
+.app-shell {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    position: relative;
+    flex-shrink: 0;
+    transition: width 0.3s ease, min-width 0.3s ease;
+}
+
+.sidebar-toggle {
+    display: block;
+    margin: 12px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #F39C12;
+    color: #1E2530;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.sidebar-toggle:hover {
+    background: #E67E22;
+}
+
+/* Menú contraído */
+.sidebar.collapsed {
+    width: 70px;
+    min-width: 70px;
+}
+
+/* Ocultar el logotipo y los textos */
+.sidebar.collapsed .brand,
+.sidebar.collapsed .nav-link span {
+    display: none;
+}
+
+/* Centrar los iconos */
+.sidebar.collapsed .nav-link {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.sidebar.collapsed .nav-link img {
+    margin: 0;
+}
+
+/* El contenido ocupa el espacio disponible */
+.content-wrapper {
+    flex: 1;
+    min-width: 0;
+}
+
+/* En móviles, el menú también puede contraerse */
+@media (max-width: 768px) {
+    .sidebar.collapsed {
+        width: 60px;
+        min-width: 60px;
+    }
+}
