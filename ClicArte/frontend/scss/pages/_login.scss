@@ -80,3 +80,92 @@
     text-align: center;
     font-size: 14px;
 }
+
+/* Capa que tapa toda la pantalla. Empieza invisible. */
+.pantalla-carga {
+  position: fixed;
+  inset: 0;                       /* top/right/bottom/left = 0 → cubre todo */
+  z-index: 9999;                  /* por encima de cualquier otro elemento */
+  display: grid;
+  place-items: center;            /* centra el contenido en horizontal y vertical */
+  background: var(--color-nav);
+  opacity: 0;
+  visibility: hidden;             /* oculta y no clicable */
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* El JS añade esta clase y aparece con fundido */
+.pantalla-carga.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.carga-contenido {
+  display: flex;
+  flex-direction: column;         /* logo, texto y barra apilados */
+  align-items: center;
+  gap: 1.5rem;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Contenedor del anillo giratorio */
+.carga-spinner {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+}
+
+/* Anillo: un círculo con borde donde solo 2 lados tienen color */
+.carga-spinner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  border-top-color: var(--color-brand);
+  border-right-color: var(--color-brand-dark);
+  animation: carga-giro 1s linear infinite;
+}
+
+.carga-mensaje {
+  margin: 0;
+  min-height: 1.5em;              /* evita que la barra "salte" al cambiar el texto */
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Barra: el contenedor es el hueco, el progreso es el relleno */
+.carga-barra {
+  width: 220px;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+}
+
+.carga-barra-progreso {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: 3px;
+  background: var(--color-brand);
+  /* La duración la pone el JS con la variable --duracion-carga */
+  transition: width var(--duracion-carga, 2800ms) ease-in-out;
+}
+
+.pantalla-carga.visible .carga-barra-progreso {
+  width: 100%;                    /* al aparecer, la barra se llena */
+}
+
+@keyframes carga-giro {
+  to { transform: rotate(360deg); }
+}
+
+/* Quien tenga desactivadas las animaciones en su sistema no las verá */
+@media (prefers-reduced-motion: reduce) {
+  .carga-spinner::before { animation: none; }
+}
