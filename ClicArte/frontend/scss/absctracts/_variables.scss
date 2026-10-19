@@ -26,3 +26,16 @@ $radius-md: 10px;
     --radius-sm: #{$radius-sm};
     --radius-md: #{$radius-md};
 }
+
+// Tema oscuro
+[data-theme="dark"] {
+    --color-ink: #f1f5f9;
+    --color-muted: #b0becb;
+    --color-surface: #1e293b;
+    --color-surface-alt: #273548;
+    --color-border: #425166;
+    --color-brand: #ffad42;
+    --color-brand-dark: #ffc477;
+    --color-nav: #172233;
+    --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
