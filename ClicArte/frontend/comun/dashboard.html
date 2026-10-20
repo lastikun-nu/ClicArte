@@ -5,60 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | ClicArte</title>
     <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/sidebar.js" defer></script>
+    <script src="../js/nuno.js" defer></script>
 </head>
 <body class="page-app">
     <div class="app-shell">
-        <aside class="sidebar" aria-label="Navegación principal">
-            <a class="brand" href="dashboard.html">
-                <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte">
-            </a>
-            <nav class="primary-nav" aria-label="Menú principal">
-                <a href="dashboard.html" class="nav-link activo">
-                    <img src="../IMGBLANCO/dashboard.png" alt="">
-                    <span>Dashboard</span>
+        <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+            <header class="logopaginas">
+                <a href="index.html">
+                    <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte">
                 </a>
-                <a href="../alumno/misEquipos.html" class="nav-link">
-                    <img src="../IMGBLANCO/equipo.png" alt="">
-                    <span>Equipos</span>
-                </a>
-                <a href="../alumno/misIncidencias.html" class="nav-link">
-                    <img src="../IMGBLANCO/grafico-de-barras.png" alt="">
-                    <span>Mi Historial</span>
-                </a>
-                <a href="../alumno/formularioTicket.html" class="nav-link">
-                    <img src="../IMGBLANCO/incidencia.png" alt="">
-                    <span>Incidencias/Solicitudes</span>
-                </a>
-            </nav>
-            <a href="../comun/index.html" class="nav-link logout">Cerrar Sesión</a>
+            </header>
+            <nav class="sidebar-nav" aria-label="Navegación principal" data-role="alumno" data-active="dashboard"></nav>
+            <a href="index.html" class="logout" data-i18n="cerrarsesion">Cerrar Sesión</a>
         </aside>
         <div class="content-wrapper">
             <header class="top-header">
                 <div>
                     <p class="eyebrow">ClicArte</p>
-                    <h1>Tu actividad en ClicArte</h1>
+                    <h1 data-i18n="actividad">Tu actividad en ClicArte</h1>
                 </div>
-                <p class="user-info">Usuario</p>
+                <p class="user-info" data-i18n="userNormal">Usuario</p>
             </header>
             <main class="main-content">
-                <h2>Bienvenido, #</h2>
+
+                <div class="selector-idioma-alumno">
+                <button type="button" data-lang="zh">中文</button>
+                <button type="button" data-lang="es">Español</button>
+                <button type="button" data-lang="en">English</button>
+                <button type="button" id="theme-toggle" aria-label="Cambiar a tema claro">
+                     <i class="fa-solid fa-circle-half-stroke"></i>
+                </button>
+                </div>                
+
+                <h2 data-i18n="dashbienvenido">Bienvenido, #</h2>
                 <section class="dashboard-widgets">
                     <article class="widget">
-                        <h3>Mi ordenador asignado</h3>
-                        <p>Equipo #</p>
-                        <p>Planta # Aula # Estado #</p>
+                        <h3 data-i18n="dashordenador">Mi ordenador asignado</h3>
+                        <p data-i18n="dashequipo">Equipo #</p>
+                        <p data-i18n="dashestado">Planta # Aula # Estado #</p>
                     </article>
                     <article class="widget">
-                        <h3>Mis Incidencias</h3>
-                        <p>Estado de tus incidencias y solicitudes.</p>
+                        <h3 data-i18n="dashincidencia">Mis Incidencias</h3>
+                        <p data-i18n="dashestadoinc">Estado de tus incidencias y solicitudes.</p>
                         <hr>
-                        <a href="../alumno/misIncidencias.html" class="button">Ver Mi Historial</a>
-                        <a href="../alumno/formularioTicket.html" class="button">Crear Nueva</a>
+                        <a href="../alumno/misIncidencias.html" class="button" data-i18n="dashhistory">Ver Mi Historial</a>
+                        <a href="../alumno/formularioTicket.html" class="button" data-i18n="dashcrear">Crear Nueva</a>
                     </article>
                     <article class="widget">
-                        <h3>Estado General del Centro</h3>
-                        <p>Equipos operativos: #</p>
-                        <p>Equipos con incidencias: #</p>
+                        <h3 data-i18n="dashestadocentro">Estado General del Centro</h3>
+                        <p data-i18n="dashoperativos">Equipos operativos: #</p>
+                        <p data-i18n="dashequipoinc">Equipos con incidencias: #</p>
                     </article>
                 </section>
             </main>
