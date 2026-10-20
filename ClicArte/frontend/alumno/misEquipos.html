@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mis Equipos | ClicArte</title>
         <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/sidebar.js" defer></script>
+        <script src="../js/equipment-search.js" defer></script>
+        <script src="../js/nuno.js" defer></script>
     </head>
 <body class="page-app">
     <section class="dashboard-container">
@@ -18,12 +21,25 @@
             <a href="../comun/index.html" class="logout">Cerrar Sesión</a>
         </aside>
         <main class="content-wrapper">
+            <div class="selector-idioma-alumno">
+            <button type="button" data-lang="zh">中文</button>
+            <button type="button" data-lang="es">Español</button>
+            <button type="button" data-lang="en">English</button>
+            <button type="button" id="theme-toggle" aria-label="Cambiar a tema claro">
+                     <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+            </div>
             <header class="top-header">
                 <h1>Mis Equipos</h1>
                 <span class="user-info">Usuario</span>
             </header>
             <section class="main-content">
                 <p>Equipos que tienes asignados bajo tu responsabilidad:</p>
+                <label class="equipment-search">
+                    <span data-i18n="buscaequipo">Buscar equipo</span>
+                    <input id="equipmentSearch" type="search" placeholder="Nombre, tipo, ubicación..." data-i18n-placeholder="searchbar" autocomplete="off">
+                </label>
+                <p class="equipment-search-status" id="equipmentSearchStatus" role="status" aria-live="polite"></p>
                 <article class="equipo-card">
                     <figure class="equipo-imagen">
                         <span>Imagen Equipo #</span>
