@@ -5,9 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gestión de Equipos | ClicArte</title>
         <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/sidebar.js" defer></script>
+        <script src="../js/equipment-search.js" defer></script>
     </head>
 <body class="page-app">
-    <section class="dashboard-container">
+    <section class="app-shell">
        <aside class="sidebar">
             <header class="logopaginas">
                 <a href="../comun/dashboard.html">
@@ -25,6 +27,11 @@
                 </header>
                 <section class="main-content">
                     <p>Aquí puedes ver el listado de todos los equipos del centro.</p>
+                    <label class="equipment-search">
+                        Buscar equipo
+                        <input id="equipmentSearch" type="search" placeholder="Nombre, tipo, aula..." autocomplete="off">
+                    </label>
+                    <p class="equipment-search-status" id="equipmentSearchStatus" role="status" aria-live="polite"></p>
                     <table>
                         <thead>
                             <tr><th>Nº</th>
