@@ -9,15 +9,15 @@
         <script src="../js/nuno.js" defer></script>
     </head>
 <body class="page-app">
-    <section class="dashboard-container">
-         <aside class="sidebar">
+    <section class="app-shell">
+        <aside class="sidebar">
             <header class="logopaginas">
                 <a href="../comun/dashboard.html">
                     <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte">
                 </a>
             </header>
                 <nav class="sidebar-nav" aria-label="Navegación principal" data-role="alumno" data-active="incidencias"></nav>
-            <a href="../comun/index.html" class="logout">Cerrar Sesión</a>
+            <a href="../comun/index.html" class="logout" data-i18n="cerrarsesion">Cerrar Sesión</a>
         </aside>
         <main class="content-wrapper">
             <div class="selector-idioma-alumno">
@@ -29,31 +29,31 @@
                 </button>
             </div>
             <header class="top-header">
-                <h1>Nueva Incidencia</h1>
-                <span class="user-info">Usuario</span>
+                <h1 data-i18n="newincidencia">Nueva Incidencia</h1>
+                <span class="user-info" data-i18n="userNormal">Usuario</span>
             </header>
             <section class="main-content">
                 <article class="form-card">
-                <h2>Detalles del problema</h2>
+                <h2 data-i18n="detalles">Detalles del problema</h2>
                     <form action="#" method="post">
                         <p class="form-group">
-                            <label for="tipo">¿Qué necesitas?</label>
+                            <label for="tipo" data-i18n="ayuda">¿Qué necesitas?</label>
                             <select id="tipo" name="tipo">
-                                <option>Reportar una Incidencia</option>
-                                <option>Hacer una Solicitud</option>
+                                <option data-i18n="option1">Reportar una Incidencia</option>
+                                <option data-i18n="option2">Hacer una Solicitud</option>
                             </select>
                         </p>
                         <p class="form-group">
-                            <label for="equipo">Equipo afectado:</label>
+                            <label for="equipo" data-i18n="equipafe">Equipo afectado:</label>
                             <select id="equipo" name="equipo">
                                 <option>#</option>
                             </select>
                         </p>
                         <p class="form-group">
-                            <label for="descripcion">Descripción detallada:</label>
-                            <textarea id="descripcion" name="descripcion" rows="6" placeholder="Describe el problema..."></textarea>
+                            <label for="descripcion" data-i18n="description">Descripción detallada:</label>
+                            <textarea id="descripcion" name="descripcion" rows="6" data-i18n-placeholder="descriptionPlaceholder" placeholder="Describe el problema..." ></textarea>
                         </p>
-                        <button type="submit" class="btn-submit">Enviar Ticket</button>
+                        <button type="submit" class="btn-submit" data-i18n="enviarticket">Enviar Ticket</button>
                     </form> 
                 </article>
             </section>
