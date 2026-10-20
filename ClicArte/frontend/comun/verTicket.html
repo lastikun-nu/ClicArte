@@ -9,7 +9,7 @@
         <script src="../js/nuno.js" defer></script>
     </head>
 <body class="page-app">
-    <section class="dashboard-container">
+    <section class="app-shell">
         <aside class="sidebar">
         <header class="logopaginas">
             <a href="dashboard.html">
@@ -17,10 +17,10 @@
             </a>
         </header>
             <nav class="sidebar-nav" aria-label="Navegación principal" data-role="alumno" data-active="historial"></nav>
-            <a href="index.html" class="logout">Cerrar Sesión</a>
+            <a href="index.html" class="logout" data-i18n="cerrarsesion">Cerrar Sesión</a>
         </aside>
     <main class="content-wrapper">
-         <div class="selector-idioma-alumno">
+        <div class="selector-idioma-alumno">
         <button type="button" data-lang="zh">中文</button>
         <button type="button" data-lang="es">Español</button>
         <button type="button" data-lang="en">English</button>
@@ -29,29 +29,29 @@
         </button>
         </div>
         <header class="top-header">
-            <h1>Detalle del Ticket</h1>
-            <span class="user-info">Usuario</span>
+            <h1 data-i18n="detalleTicket">Detalle del Ticket</h1>
+            <span class="user-info" data-i18n="userNormal">Usuario</span>
         </header>
-            <section class="main-content">    
+            <section class="main-content">
                 <article class="widget form-container">
-                    <a href="../alumno/misIncidencias.html" class="btn-volver">&larr; Volver al Listado</a>
-                    <h2>Detalle del Ticket Nº #</h2>
-                    <h2>Detalles de la Solicitud</h2>
+                    <a href="../alumno/misIncidencias.html" class="btn-volver" data-i18n="backlist">&larr; Volver al Listado</a>
+                    <h2 data-i18n="ticketinfo">Detalle del Ticket Nº #</h2>
+                    <h2 data-i18n="solicitudinfo">Detalles de la Solicitud</h2>
                     <section class="form-grid-2-col">
                         <p class="form-group">
-                            <label>Creado por:</label><strong>#</strong>
+                            <label data-i18n="creadoinfo">Creado por:</label><strong>#</strong>
                         </p>
                         <p class="form-group">
-                            <label>Equipo:</label><strong>#</strong>
+                            <label data-i18n="equipoinfo">Equipo:</label><strong>#</strong>
                         </p>
                         <p class="form-group">
-                            <label>Ubicación:</label><strong>Planta # - Aula #</strong>
+                            <label data-i18n="ubicacion">Ubicación:</label><strong>Planta # - Aula #</strong>
                         </p>
                         <p class="form-group">
-                            <label>Estado:</label><strong>#</strong>
+                            <label data-i18n="estadoinfo">Estado:</label><strong>#</strong>
                         </p>
                         <p class="form-group">
-                            <label>Descripción:</label><strong>#</strong>
+                            <label data-i18n="descripcioninfo">Descripción:</label><strong>#</strong>
                         </p>
                     </section>
                 </article>
