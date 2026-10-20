@@ -10,7 +10,7 @@
         <script src="../js/nuno.js" defer></script>
     </head>
 <body class="page-app">
-    <section class="dashboard-container">
+    <section class="app-shell">
         <aside class="sidebar">
             <header class="logopaginas">
                 <a href="../comun/dashboard.html">
@@ -18,7 +18,7 @@
                 </a>
             </header>
             <nav class="sidebar-nav" aria-label="Navegación principal" data-role="alumno" data-active="equipos"></nav>
-            <a href="../comun/index.html" class="logout">Cerrar Sesión</a>
+            <a href="../comun/index.html" class="logout" data-i18n="cerrarsesion">Cerrar Sesión</a>
         </aside>
         <main class="content-wrapper">
             <div class="selector-idioma-alumno">
@@ -30,25 +30,25 @@
             </button>
             </div>
             <header class="top-header">
-                <h1>Mis Equipos</h1>
-                <span class="user-info">Usuario</span>
+                <h1 data-i18n="miequipo">Mis Equipos</h1>
+                <span class="user-info" data-i18n="userNormal">Usuario</span>
             </header>
             <section class="main-content">
-                <p>Equipos que tienes asignados bajo tu responsabilidad:</p>
+                <p data-i18n="tuequipo">Equipos que tienes asignados bajo tu responsabilidad:</p>
                 <label class="equipment-search">
                     <span data-i18n="buscaequipo">Buscar equipo</span>
                     <input id="equipmentSearch" type="search" placeholder="Nombre, tipo, ubicación..." data-i18n-placeholder="searchbar" autocomplete="off">
                 </label>
                 <p class="equipment-search-status" id="equipmentSearchStatus" role="status" aria-live="polite"></p>
-                <article class="equipo-card">
+                <article class="equipo-card equipment-search-item">
                     <figure class="equipo-imagen">
-                        <span>Imagen Equipo #</span>
+                        <span data-i18n="imagenEquipo">Imagen Equipo #</span>
                     </figure>
                     <section class="equipo-detalles">
-                        <h3>Nº Equipo: #</h3>
-                        <p><strong>Tipo:</strong> #</p>
-                        <p><strong>Ubicación:</strong> #</p>
-                        <p><strong>Estado:</strong> #</p>
+                        <h3 data-i18n="nequipo">Nº Equipo: #</h3>
+                        <p ><strong data-i18n="tipo">Tipo:</strong> #</p>
+                        <p ><strong data-i18n="ubicacion">Ubicación:</strong> #</p>
+                        <p ><strong data-i18n="estadoinfo">Estado:</strong> #</p>
                     </section>
                 </article>
             </section>
