@@ -5,9 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gestión de Equipos | ClicArte</title>
         <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/sidebar.js" defer></script>
+        <script src="../js/nuno.js" defer></script>
     </head>
 <body class="page-app">
-    <section class="dashboard-container">
+    <section class="app-shell">
         <aside class="sidebar">
             <header class="logopaginas">
                 <a href="../comun/dashboard.html">
@@ -16,7 +18,11 @@
             </header>
             <nav class="sidebar-nav" aria-label="Navegación principal" data-role="tecnico" data-active="equipos"></nav>
             <a href="../comun/index.html" class="logout">Cerrar Sesión</a>
-        </aside><main class="content-wrapper">
+        </aside>
+        <main class="content-wrapper">
+            <div class="selector-idioma-alumno">
+            <button type="button" id="theme-toggle" aria-label="Cambiar tema">Dark</button>
+            </div>
             <header class="top-header">
                 <h1>Gestión de Equipos</h1>
                 <span class="user-info">Técnico</span>
@@ -51,6 +57,11 @@
                     </form>
                 </article>
             </details>
+            <label class="equipment-search">
+                Buscar equipo
+                <input id="equipmentSearch" type="search" placeholder="Nombre, tipo, aula..." autocomplete="off">
+            </label>
+            <p class="equipment-search-status" id="equipmentSearchStatus" role="status" aria-live="polite"></p>
             <table><thead>
                 <tr><th>Nº</th>
                     <th>Tipo</th>
