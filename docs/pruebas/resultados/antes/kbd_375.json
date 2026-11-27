@@ -1,0 +1,347 @@
+{
+ "T1_login": {
+  "tabs_hasta_correo": 5,
+  "secuencia": [
+   {
+    "el": "button",
+    "name": "中文",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "comun/index.html"
+   },
+   {
+    "el": "button",
+    "name": "Español",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "comun/index.html"
+   },
+   {
+    "el": "button",
+    "name": "English",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "comun/index.html"
+   },
+   {
+    "el": "button#theme-toggle",
+    "name": "Cambiar a tema claro",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "comun/index.html"
+   },
+   {
+    "el": "input#correo",
+    "name": "ejemplo@campus.com",
+    "ring": false,
+    "outline": "none 3px rgb(0, 0, 0)",
+    "inView": true,
+    "url": "comun/index.html"
+   }
+  ],
+  "tabs_hasta_boton": 1,
+  "secuencia2": [
+   {
+    "el": "button.btn-login",
+    "name": "ESTUDIANTE",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "comun/index.html"
+   }
+  ],
+  "url_final": "alumno/misIncidencias.html"
+ },
+ "T2_formulario_vacio": {
+  "tabs_hasta_primer_campo": 12,
+  "secuencia": [
+   {
+    "el": "button.sidebar-toggle",
+    "name": "Contraer menú",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "a",
+    "name": "",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "a",
+    "name": "Dashboard",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "a",
+    "name": "Equipos",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "a",
+    "name": "Mi Historial",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "a.activo",
+    "name": "Incidencias/Solicitudes",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "a.logout",
+    "name": "Cerrar Sesión",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "button",
+    "name": "中文",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "button",
+    "name": "Español",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "button",
+    "name": "English",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "button#theme-toggle",
+    "name": "Cambiar a tema claro",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "select#tipo",
+    "name": "Reportar una Incidencia Hacer una Solici",
+    "ring": false,
+    "outline": "none 3px rgb(36, 52, 71)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   }
+  ],
+  "tabs_campo_a_boton": 3,
+  "resultado_envio": {
+   "mensaje": null,
+   "foco": "BODY#",
+   "url": null
+  }
+ },
+ "T2_shift_tab": [
+  {
+   "el": "button.btn-submit",
+   "name": "Enviar Ticket",
+   "ring": true,
+   "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+   "inView": true,
+   "url": "alumno/formularioTicket.html"
+  },
+  {
+   "el": "textarea#descripcion",
+   "name": "Describe el problema...",
+   "ring": false,
+   "outline": "none 3px rgb(36, 52, 71)",
+   "inView": true,
+   "url": "alumno/formularioTicket.html"
+  },
+  {
+   "el": "select#equipo",
+   "name": "#",
+   "ring": false,
+   "outline": "none 3px rgb(36, 52, 71)",
+   "inView": true,
+   "url": "alumno/formularioTicket.html"
+  }
+ ],
+ "T2b_con_salto": {
+  "primer_foco": {
+   "el": "button.sidebar-toggle",
+   "name": "Contraer menú",
+   "ring": true,
+   "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+   "inView": true,
+   "url": "alumno/formularioTicket.html"
+  },
+  "tabs_tras_saltar": null
+ },
+ "T4_menu": {
+  "tabs_hasta_boton_menu": 1,
+  "inicial": {
+   "expanded": "true",
+   "label": "Contraer menú",
+   "menuVisible": true
+  },
+  "tras_enter": {
+   "expanded": "false",
+   "label": "Desplegar menú",
+   "menuVisible": true
+  },
+  "siguiente_foco": {
+   "el": "a",
+   "name": "Dashboard",
+   "ring": true,
+   "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+   "inView": true,
+   "url": "alumno/misIncidencias.html"
+  },
+  "tras_escape": {
+   "expanded": "false",
+   "menuVisible": true,
+   "foco": ""
+  }
+ },
+ "T3_consultar": {
+  "tabs_hasta_consultar": 13,
+  "secuencia": [
+   {
+    "el": "button.sidebar-toggle",
+    "name": "Contraer menú",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "a",
+    "name": "",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "a",
+    "name": "Dashboard",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "a",
+    "name": "Equipos",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "a.activo",
+    "name": "Mi Historial",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "a",
+    "name": "Incidencias/Solicitudes",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "a.logout",
+    "name": "Cerrar Sesión",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "button",
+    "name": "中文",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "button",
+    "name": "Español",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "button",
+    "name": "English",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "button#theme-toggle",
+    "name": "Cambiar a tema claro",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "a.button",
+    "name": "Crear Nueva Incidencia",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "a.btn-consultar",
+    "name": "Consultar",
+    "ring": true,
+    "outline": "solid 3px rgba(229, 138, 31, 0.45)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   }
+  ],
+  "url_final": "comun/verTicket.html"
+ },
+ "_resumen": {
+  "focos_registrados": 31,
+  "sin_anillo": [
+   "input#correo",
+   "select#tipo"
+  ],
+  "fuera_de_vista": []
+ }
+}

@@ -209,11 +209,7 @@ const traducciones = {
     }
 };
 
-const fontAwesome = document.createElement('link');
-fontAwesome.rel = 'stylesheet';
-fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
-
-document.head.appendChild(fontAwesome);
+//Font Awesome se enlaza ahora en el <head> de cada página (iconos decorativos del botón de tema).
 //Crear un funcion para que se puede traductor la pagina
 function cambiaIdioma(idioma){
     //Buscar todos etiquetas que tiene data-i18n, y coger texto de las etiquetas guardar como un array.
@@ -234,6 +230,12 @@ function cambiaIdioma(idioma){
         placeholder.placeholder = traducciones[idioma][clave];
     }
     );
+
+    //Indicar el idioma de la página a los lectores de pantalla y marcar el botón pulsado
+    document.documentElement.lang = idioma;
+    document.querySelectorAll("[data-lang]").forEach(function(boton){
+        boton.setAttribute("aria-pressed", String(boton.dataset.lang === idioma));
+    });
 }
 
 
@@ -248,21 +250,4 @@ function cambiaIdioma(idioma){
     });
 });
 
-// Cambiar entre tema claro y oscuro
-const botonTema = document.getElementById("theme-toggle");
-
-if (botonTema) {
-    botonTema.addEventListener("click", function () {
-        const temaActual = document.documentElement.dataset.theme;
-
-        if (temaActual === "dark") {
-            document.documentElement.removeAttribute("data-theme");
-            // Muestra icono de luna para cambiar a modo oscuro
-            botonTema.innerHTML = '<i class="fa-solid fa-moon"></i>';
-        } else {
-            document.documentElement.dataset.theme = "dark";
-            // Muestra icono de sol para cambiar a modo claro
-            botonTema.innerHTML = '<i class="fa-solid fa-sun"></i>';
-        }
-    });
-}
+// El cambio de tema claro/oscuro está en theme.js (con preferencia guardada).

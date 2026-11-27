@@ -1,0 +1,80 @@
+[
+ {
+  "ancho": 375,
+  "tema": "light",
+  "T1_login": true,
+  "tema_tras_navegar": "light",
+  "T2_navegar": true,
+  "T3_formulario": true,
+  "T4_tabla": true,
+  "tabla_scroll_interno": true,
+  "desbordamiento_pagina": false,
+  "tema_tras_recargar": "light",
+  "errores_js": []
+ },
+ {
+  "ancho": 375,
+  "tema": "dark",
+  "T1_login": true,
+  "tema_tras_navegar": "dark",
+  "T2_navegar": true,
+  "T3_formulario": true,
+  "T4_tabla": true,
+  "tabla_scroll_interno": true,
+  "desbordamiento_pagina": false,
+  "tema_tras_recargar": "dark",
+  "errores_js": []
+ },
+ {
+  "ancho": 768,
+  "tema": "light",
+  "T1_login": true,
+  "tema_tras_navegar": "light",
+  "T2_navegar": true,
+  "T3_formulario": true,
+  "T4_tabla": true,
+  "tabla_scroll_interno": true,
+  "desbordamiento_pagina": false,
+  "tema_tras_recargar": "light",
+  "errores_js": []
+ },
+ {
+  "ancho": 768,
+  "tema": "dark",
+  "T1_login": true,
+  "tema_tras_navegar": "dark",
+  "T2_navegar": true,
+  "T3_formulario": true,
+  "T4_tabla": true,
+  "tabla_scroll_interno": true,
+  "desbordamiento_pagina": false,
+  "tema_tras_recargar": "dark",
+  "errores_js": []
+ },
+ {
+  "ancho": 1366,
+  "tema": "light",
+  "T1_login": true,
+  "tema_tras_navegar": "light",
+  "T2_navegar": true,
+  "T3_formulario": true,
+  "T4_tabla": true,
+  "tabla_scroll_interno": false,
+  "desbordamiento_pagina": false,
+  "tema_tras_recargar": "light",
+  "errores_js": []
+ },
+ {
+  "ancho": 1366,
+  "tema": "dark",
+  "T1_login": true,
+  "tema_tras_navegar": "dark",
+  "T2_navegar": true,
+  "T3_formulario": true,
+  "T4_tabla": true,
+  "tabla_scroll_interno": false,
+  "desbordamiento_pagina": false,
+  "tema_tras_recargar": "dark",
+  "errores_js": []
+ }
+]

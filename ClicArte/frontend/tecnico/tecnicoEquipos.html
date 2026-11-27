@@ -3,84 +3,97 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gestión de Equipos | ClicArte</title>
+        <meta name="robots" content="noindex, nofollow">
+        <title>Inventario de equipos (técnico) | ClicArte</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/theme.js"></script>
         <script src="../js/sidebar.js" defer></script>
-        <script src="../js/nuno.js" defer></script>
+        <script src="../js/equipment-search.js" defer></script>
+        <script src="../js/form-feedback.js" defer></script>
     </head>
 <body class="page-app">
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
     <section class="app-shell">
         <aside class="sidebar">
             <header class="logopaginas">
                 <a href="../comun/dashboard.html">
-                    <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte">
+                    <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte, ir al panel principal">
                 </a>
             </header>
             <nav class="sidebar-nav" aria-label="Navegación principal" data-role="tecnico" data-active="equipos"></nav>
             <a href="../comun/index.html" class="logout">Cerrar Sesión</a>
         </aside>
         <main class="content-wrapper">
-            <div class="selector-idioma-alumno">
-            <button type="button" id="theme-toggle" aria-label="Cambiar tema">Dark</button>
-            </div>
+            <section class="barra-preferencias" aria-label="Idioma y tema">
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false"><i class="fa-solid fa-moon" aria-hidden="true"></i>Tema oscuro</button>
+            </section>
             <header class="top-header">
-                <h1>Gestión de Equipos</h1>
-                <span class="user-info">Técnico</span>
+                <h1>Inventario de equipos</h1>
+                <p class="user-info">Técnico</p>
             </header>
-            <section class="main-content">
-                <details>
-                <summary>Añadir Nuevo Equipo</summary>
-                <article class="form-container">
-                    <form action="#" method="post">
-                        <section class="form-grid">
-                            <p><label for="tipo">Tipo:</label>
-                                <input type="text" id="tipo" name="tipo">
-                            </p>
-                            <p><label for="numero">Nº Equipo:</label>
-                                <input type="text" id="numero" name="numero">
-                            </p>
-                            <p><label for="serie">Nº Serie:</label>
-                                <input type="text" id="serie" name="serie">
-                            </p>
-                            <p><label for="planta">Planta:</label>
-                                <select id="planta" name="planta">
-                                    <option>#</option>
-                                </select>
-                            </p>
-                            <p><label for="aula">Aula:</label>
-                                <select id="aula" name="aula">
-                                    <option>#</option>
-                                </select>
-                            </p>
-                        </section>
-                        <button type="submit">Guardar Equipo</button>
-                    </form>
-                </article>
-            </details>
-            <label class="equipment-search">
-                Buscar equipo
-                <input id="equipmentSearch" type="search" placeholder="Nombre, tipo, aula..." autocomplete="off">
-            </label>
-            <p class="equipment-search-status" id="equipmentSearchStatus" role="status" aria-live="polite"></p>
-            <table><thead>
-                <tr><th>Nº</th>
-                    <th>Tipo</th>
-                    <th>Nº Equipo</th>
-                    <th>Planta</th>
-                    <th>Aula</th>
-                    <th>Estado</th>
-                    <th>Asignado a</th>
-                </tr></thead>
-                <tbody>
-                    <tr><td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                    </tr></tbody>
-                </table>
+            <section class="main-content" id="contenido">
+                <details class="panel-desplegable">
+                    <summary>Añadir nuevo equipo</summary>
+                    <article class="form-container">
+                        <form action="#" method="post" data-validar>
+                            <section class="form-grid">
+                                <p><label for="tipo">Tipo <span class="obligatorio">(obligatorio)</span></label>
+                                    <input type="text" id="tipo" name="tipo" required>
+                                </p>
+                                <p><label for="numero">Nº Equipo <span class="obligatorio">(obligatorio)</span></label>
+                                    <input type="text" id="numero" name="numero" required>
+                                </p>
+                                <p><label for="serie">Nº Serie</label>
+                                    <input type="text" id="serie" name="serie">
+                                </p>
+                                <p><label for="planta">Planta</label>
+                                    <select id="planta" name="planta">
+                                        <option>#</option>
+                                    </select>
+                                </p>
+                                <p><label for="aula">Aula</label>
+                                    <select id="aula" name="aula">
+                                        <option>#</option>
+                                    </select>
+                                </p>
+                            </section>
+                            <button type="submit" class="btn-submit">Guardar equipo</button>
+                        </form>
+                    </article>
+                </details>
+                <label class="equipment-search">
+                    <span>Buscar equipo</span>
+                    <input id="equipmentSearch" type="search" placeholder="Nombre, tipo, aula..." autocomplete="off">
+                </label>
+                <p class="equipment-search-status" id="equipmentSearchStatus" role="status" aria-live="polite"></p>
+                <section class="table-container" role="region" aria-labelledby="caption-inventario" tabindex="0">
+                    <table>
+                        <caption id="caption-inventario">Inventario de equipos del centro</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nº</th>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">Nº Equipo</th>
+                                <th scope="col">Planta</th>
+                                <th scope="col">Aula</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Asignado a</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="equipment-search-item">
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
             </section>
         </main>
     </section>

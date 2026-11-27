@@ -3,60 +3,65 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gestionar Ticket | ClicArte</title>
+        <meta name="robots" content="noindex, nofollow">
+        <title>Gestionar ticket | ClicArte</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/theme.js"></script>
         <script src="../js/sidebar.js" defer></script>
+        <script src="../js/form-feedback.js" defer></script>
     </head>
 <body class="page-app">
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
     <section class="app-shell">
-    <aside class="sidebar">
-        <header class="logopaginas">
-            <a href="../comun/dashboard.html">
-                <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte">
-            </a>
-        </header>
+        <aside class="sidebar">
+            <header class="logopaginas">
+                <a href="../comun/dashboard.html">
+                    <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte, ir al panel principal">
+                </a>
+            </header>
             <nav class="sidebar-nav" aria-label="Navegación principal" data-role="tecnico" data-active="incidencias"></nav>
             <a href="../comun/index.html" class="logout">Cerrar Sesión</a>
-    </aside>
+        </aside>
         <main class="content-wrapper">
-            <div class="selector-idioma-alumno">
-            <button type="button" id="theme-toggle" aria-label="Cambiar tema">Dark</button>
-            </div>
+            <section class="barra-preferencias" aria-label="Idioma y tema">
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false"><i class="fa-solid fa-moon" aria-hidden="true"></i>Tema oscuro</button>
+            </section>
             <header class="top-header">
                 <h1>Gestionar Ticket #</h1>
-                <span class="user-info">Técnico</span>
+                <p class="user-info">Técnico</p>
             </header>
-            <section class="main-content">
+            <section class="main-content" id="contenido">
                 <article class="form-container">
-                    <a href="tecnicoIncidencias.html" class="back-link">&larr; Volver al panel</a>
-                    <hr>
+                    <a href="tecnicoIncidencias.html" class="enlace-volver">&larr; Volver al panel</a>
                     <section class="ticket-details">
-                        <h3>Descripción del Usuario</h3>
-                        <p><strong>Usuario:</strong> #</p>
-                        <p><strong>Equipo:</strong> #</p>
-                        <p><strong>Fecha de inicio:</strong> #</p>
-                        <p><strong>Descripción:</strong> #</p>
+                        <h2>Descripción del usuario</h2>
+                        <dl class="ticket-datos">
+                            <dt>Usuario:</dt><dd>#</dd>
+                            <dt>Equipo:</dt><dd>#</dd>
+                            <dt>Fecha de inicio:</dt><dd>#</dd>
+                            <dt>Descripción:</dt><dd>#</dd>
+                        </dl>
                     </section>
-                    <form action="#" method="post" class="form-gestion">
+                    <form action="#" method="post" class="form-gestion" data-validar>
                         <section class="form-grid">
-                            <p><label for="estado">Estado del Ticket:</label>
+                            <p><label for="estado">Estado del ticket</label>
                                 <select id="estado" name="estado">
                                     <option>En curso</option>
                                     <option>En espera</option>
                                     <option>Finalizado</option>
                                 </select>
                             </p>
-                            <p><label for="tecnico">Técnico Asignado:</label>
+                            <p><label for="tecnico">Técnico asignado</label>
                                 <select id="tecnico" name="tecnico">
                                     <option>#</option>
                                 </select>
                             </p>
+                            <p class="full-width"><label for="comentario">Comentarios del técnico</label>
+                                <textarea id="comentario" name="comentario" rows="6"></textarea>
+                            </p>
                         </section>
-                        <p class="full-width">
-                            <label for="comentario">Comentarios del Técnico:</label>
-                            <textarea id="comentario" name="comentario" rows="6"></textarea>
-                        </p>
-                        <button type="submit">Guardar Cambios</button>
+                        <button type="submit" class="btn-submit">Guardar cambios</button>
                     </form>
                 </article>
             </section>

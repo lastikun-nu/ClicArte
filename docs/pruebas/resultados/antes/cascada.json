@@ -1,0 +1,95 @@
+{
+ "btn_submit": {
+  "elemento": ".btn-submit",
+  "pseudo": null,
+  "declaraciones": [
+   {
+    "origen": "línea 423",
+    "selector": ".btn-submit",
+    "prop": "padding",
+    "valor": "10px 20px",
+    "estado": "aplicada"
+   },
+   {
+    "origen": "línea 419",
+    "selector": ".btn-submit",
+    "prop": "padding",
+    "valor": "12px 20px",
+    "estado": "tachada"
+   }
+  ],
+  "calculado": {
+   "padding-bottom": "10px",
+   "padding-left": "20px",
+   "padding-right": "20px",
+   "padding-top": "10px"
+  }
+ },
+ "button_hover": {
+  "elemento": "a.button",
+  "pseudo": [
+   "hover"
+  ],
+  "declaraciones": [
+   {
+    "origen": "línea 382",
+    "selector": "a.button:hover",
+    "prop": "background-color",
+    "valor": "#27AE60",
+    "estado": "aplicada"
+   },
+   {
+    "origen": "línea 369",
+    "selector": "a.button, a.button.success",
+    "prop": "background-color",
+    "valor": "#2ECC71",
+    "estado": "tachada"
+   }
+  ],
+  "calculado": {
+   "background-color": "rgb(39, 174, 96)"
+  }
+ },
+ "textarea_oscuro": {
+  "elemento": "html",
+  "pseudo": null,
+  "declaraciones": [
+   {
+    "origen": "línea 19",
+    "selector": "[data-theme=\"dark\"]",
+    "prop": "--color-surface",
+    "valor": "#1e293b",
+    "estado": "aplicada"
+   },
+   {
+    "origen": "línea 17",
+    "selector": "[data-theme=\"dark\"]",
+    "prop": "--color-ink",
+    "valor": "#f1f5f9",
+    "estado": "aplicada"
+   },
+   {
+    "origen": "línea 5",
+    "selector": ":root",
+    "prop": "--color-surface",
+    "valor": "#ffffff",
+    "estado": "tachada"
+   },
+   {
+    "origen": "línea 3",
+    "selector": ":root",
+    "prop": "--color-ink",
+    "valor": "#243447",
+    "estado": "tachada"
+   }
+  ],
+  "calculado": {
+   "--color-ink": "#f1f5f9",
+   "--color-surface": "#1e293b"
+  }
+ },
+ "textarea_oscuro_calc": {
+  "background": "rgb(30, 41, 59)",
+  "color": "rgb(241, 245, 249)"
+ }
+}

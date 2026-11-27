@@ -1,47 +1,40 @@
-//Son los css de gestion aula(panel profesor)
+// Gestión de aulas (panel del profesorado).
+@use "../abstracts/variables" as vars;
 
 .aula-container {
     margin-bottom: 25px;
-
     background-color: var(--color-surface);
-
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-soft);
 }
 
 .aula-header {
     padding: 15px 20px;
-
-    background-color: #e8eef2;
-
+    background-color: var(--color-surface-alt);
     border-bottom: 1px solid var(--color-border);
 }
 
 .aula-header h2 {
     margin: 0;
-
     color: var(--color-ink);
 }
 
 .aula-body {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
-
     padding: 20px;
 }
 
 .aula-columna h3 {
     margin-top: 0;
     padding-bottom: 8px;
-
-    color: var(--color-brand);
-
+    color: var(--color-brand-text);
     border-bottom: 2px solid var(--color-border);
 }
 
-@media (max-width: 760px) {
+@media (max-width: vars.$bp-mobile) {
     .aula-body {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 }

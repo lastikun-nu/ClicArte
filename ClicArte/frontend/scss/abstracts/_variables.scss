@@ -1,0 +1,98 @@
+// Tokens de diseño de ClicArte.
+// Regla del proyecto: ningún componente escribe un color directamente;
+// todos usan una custom property de esta lista para que el tema oscuro funcione.
+
+// --- Paleta del tema principal (claro) ---
+$color-ink: #243447;          // texto principal
+$color-muted: #607080;        // texto secundario (4,73:1 sobre surface-alt)
+$color-surface: #ffffff;      // tarjetas, tablas, formularios
+$color-surface-alt: #f4f7f9;  // fondo de página
+$color-border: #d9e1e7;         // separadores y bordes de tabla (decorativos)
+$color-field-border: #7b8794;   // borde de campos y botones secundarios: 3,66:1 (WCAG 1.4.11)
+$color-brand: #e58a1f;        // naranja de marca (fondos de botones y estado activo)
+$color-brand-dark: #f3a54a;   // hover de los botones de marca
+$color-on-brand: #172330;     // texto sobre naranja: 6,05:1 (antes blanco: 2,63:1)
+$color-brand-text: #9a4f00;   // naranja para texto sobre blanco: 6,01:1
+$color-link: #005a9c;         // enlaces y acentos azules: 7,14:1
+$color-focus: #0b57d0;        // anillo de foco: 6,39:1 sobre blanco
+$color-nav: #243447;          // barra lateral
+$color-on-dark: #ffffff;      // texto sobre fondos oscuros fijos (insignias, menú)
+$color-nav-text: #edf2f5;     // texto de la barra lateral: 11,24:1
+$color-nav-focus: #ffc46e;    // foco dentro de la barra lateral: 8,07:1
+$color-login-bg: #2c3e50;
+$color-success: #1e7e34;      // insignia con texto blanco: 5,14:1
+$color-success-hover: #196b2c;
+$color-warning: #ffc107;      // insignia con texto oscuro: 9,46:1
+$color-danger: #c82333;       // insignia con texto blanco: 5,61:1
+$color-success-bg: #d4edda;
+$color-success-text: #155724;
+$color-error-bg: #f8d7da;
+$color-error-text: #721c24;
+$color-error-border: #c82333;  // borde de campo con error: 5,61:1
+
+$shadow-soft: 0 8px 24px rgba(36, 52, 71, 0.08);
+$radius-sm: 6px;
+$radius-md: 10px;
+
+// Tipografía realmente disponible: no se carga Roboto, se usa la fuente del sistema.
+$font-base: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+// Punto de corte único del proyecto (móvil).
+$bp-mobile: 760px;
+
+:root {
+    --color-ink: #{$color-ink};
+    --color-muted: #{$color-muted};
+    --color-surface: #{$color-surface};
+    --color-surface-alt: #{$color-surface-alt};
+    --color-border: #{$color-border};
+    --color-field-border: #{$color-field-border};
+    --color-brand: #{$color-brand};
+    --color-brand-dark: #{$color-brand-dark};
+    --color-on-brand: #{$color-on-brand};
+    --color-brand-text: #{$color-brand-text};
+    --color-link: #{$color-link};
+    --color-focus: #{$color-focus};
+    --color-nav: #{$color-nav};
+    --color-on-dark: #{$color-on-dark};
+    --color-nav-text: #{$color-nav-text};
+    --color-nav-focus: #{$color-nav-focus};
+    --color-login-bg: #{$color-login-bg};
+    --color-success: #{$color-success};
+    --color-success-hover: #{$color-success-hover};
+    --color-warning: #{$color-warning};
+    --color-danger: #{$color-danger};
+    --color-success-bg: #{$color-success-bg};
+    --color-success-text: #{$color-success-text};
+    --color-error-bg: #{$color-error-bg};
+    --color-error-text: #{$color-error-text};
+    --color-error-border: #{$color-error-border};
+    --shadow-soft: #{$shadow-soft};
+    --radius-sm: #{$radius-sm};
+    --radius-md: #{$radius-md};
+}
+
+// Tema alternativo (oscuro): solo se redefinen los tokens, el HTML no cambia.
+[data-theme="dark"] {
+    --color-ink: #f1f5f9;
+    --color-muted: #b0becb;
+    --color-surface: #1e293b;
+    --color-surface-alt: #273548;
+    --color-border: #425166;
+    --color-field-border: #8291a5;
+    --color-brand: #ffad42;
+    --color-brand-dark: #ffc477;
+    --color-on-brand: #172330;
+    --color-brand-text: #ffad42;
+    --color-link: #9fd0ff;
+    --color-focus: #ffc46e;
+    --color-nav: #172233;
+    --color-login-bg: #172233;
+    --color-success-bg: #1f3d2a;
+    --color-success-text: #bfe6c9;
+    --color-error-bg: #4a1f24;
+    --color-error-text: #f8c8cd;
+    --color-error-border: #ff6b7a;
+    --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.25);
+    color-scheme: dark;
+}

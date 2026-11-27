@@ -3,39 +3,42 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nueva Incidencia | ClicArte</title>
+        <meta name="robots" content="noindex, nofollow">
+        <title>Nueva incidencia o solicitud | ClicArte</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/theme.js"></script>
         <script src="../js/sidebar.js" defer></script>
         <script src="../js/nuno.js" defer></script>
+        <script src="../js/form-feedback.js" defer></script>
     </head>
 <body class="page-app">
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
     <section class="app-shell">
         <aside class="sidebar">
             <header class="logopaginas">
                 <a href="../comun/dashboard.html">
-                    <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte">
+                    <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte, ir al panel principal">
                 </a>
             </header>
-                <nav class="sidebar-nav" aria-label="Navegación principal" data-role="alumno" data-active="incidencias"></nav>
+            <nav class="sidebar-nav" aria-label="Navegación principal" data-role="auto" data-active="incidencias"></nav>
             <a href="../comun/index.html" class="logout" data-i18n="cerrarsesion">Cerrar Sesión</a>
         </aside>
         <main class="content-wrapper">
-            <div class="selector-idioma-alumno">
-                <button type="button" data-lang="zh">中文</button>
-                <button type="button" data-lang="es">Español</button>
-                <button type="button" data-lang="en">English</button>
-                <button type="button" id="theme-toggle" aria-label="Cambiar a tema claro">
-                        <i class="fa-solid fa-circle-half-stroke"></i>
-                </button>
-            </div>
+            <section class="barra-preferencias" aria-label="Idioma y tema">
+                <button type="button" data-lang="zh" lang="zh" aria-pressed="false">中文</button>
+                <button type="button" data-lang="es" lang="es" aria-pressed="true">Español</button>
+                <button type="button" data-lang="en" lang="en" aria-pressed="false">English</button>
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false"><i class="fa-solid fa-moon" aria-hidden="true"></i>Tema oscuro</button>
+            </section>
             <header class="top-header">
                 <h1 data-i18n="newincidencia">Nueva Incidencia</h1>
-                <span class="user-info" data-i18n="userNormal">Usuario</span>
+                <p class="user-info" data-i18n="userNormal">Usuario</p>
             </header>
-            <section class="main-content">
+            <section class="main-content" id="contenido">
                 <article class="form-card">
-                <h2 data-i18n="detalles">Detalles del problema</h2>
-                    <form action="#" method="post">
+                    <h2 data-i18n="detalles">Detalles del problema</h2>
+                    <form action="#" method="post" data-validar>
                         <p class="form-group">
                             <label for="tipo" data-i18n="ayuda">¿Qué necesitas?</label>
                             <select id="tipo" name="tipo">
@@ -44,17 +47,18 @@
                             </select>
                         </p>
                         <p class="form-group">
-                            <label for="equipo" data-i18n="equipafe">Equipo afectado:</label>
-                            <select id="equipo" name="equipo">
+                            <label for="equipo"><span data-i18n="equipafe">Equipo afectado:</span> <span class="obligatorio">(obligatorio)</span></label>
+                            <select id="equipo" name="equipo" required>
+                                <option value="">Selecciona un equipo</option>
                                 <option>#</option>
                             </select>
                         </p>
                         <p class="form-group">
-                            <label for="descripcion" data-i18n="description">Descripción detallada:</label>
-                            <textarea id="descripcion" name="descripcion" rows="6" data-i18n-placeholder="descriptionPlaceholder" placeholder="Describe el problema..." ></textarea>
+                            <label for="descripcion"><span data-i18n="description">Descripción detallada:</span> <span class="obligatorio">(obligatorio)</span></label>
+                            <textarea id="descripcion" name="descripcion" rows="6" required data-i18n-placeholder="descriptionPlaceholder" placeholder="Describe el problema..."></textarea>
                         </p>
                         <button type="submit" class="btn-submit" data-i18n="enviarticket">Enviar Ticket</button>
-                    </form> 
+                    </form>
                 </article>
             </section>
         </main>

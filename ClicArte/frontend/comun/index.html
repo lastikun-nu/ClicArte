@@ -3,37 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | ClicArte, gestión de equipos e incidencias</title>
+    <meta name="description" content="Accede a ClicArte para consultar tus equipos, registrar incidencias y seguir el estado de tus solicitudes en el centro.">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>ClicArte - Iniciar Sesión</title>
     <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/theme.js"></script>
     <script src="../js/login.js" defer></script>
     <script src="../js/nuno.js" defer></script>
 </head>
 <body class="body-login">
     <main class="login-wrapper">
-        <header class="logo-header"><img src="../IMGBLANCO/logo_completo_negativp.png" alt="Logo de ClicArte"></header>
-        <div class="selector-idioma">
-            <button type="button" data-lang="zh">中文</button>
-            <button type="button" data-lang="es">Español</button>
-            <button type="button" data-lang="en">English</button>
-            <button type="button" id="theme-toggle" aria-label="Cambiar a tema claro">
-                     <i class="fa-solid fa-circle-half-stroke"></i>
-            </button>
-        </div>
+        <header class="logo-header"><img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte"></header>
+        <section class="selector-idioma" aria-label="Idioma y tema">
+            <button type="button" data-lang="zh" lang="zh" aria-pressed="false">中文</button>
+            <button type="button" data-lang="es" lang="es" aria-pressed="true">Español</button>
+            <button type="button" data-lang="en" lang="en" aria-pressed="false">English</button>
+            <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false"><i class="fa-solid fa-moon" aria-hidden="true"></i>Tema oscuro</button>
+        </section>
         <section class="login-card" aria-labelledby="login-title">
             <h1 id="login-title" data-i18n="logintitle">Iniciar Sesión</h1>
-            <form action="dashboard.html" method="get">
+            <form id="login-form" action="dashboard.html" method="get">
                 <p class="input-group">
                     <label for="correo" data-i18n="email">Correo Electrónico</label>
-                    <input type="email" id="correo" name="correo" placeholder="ejemplo@campus.com" data-i18n-placeholder="emailinput">
+                    <input type="email" id="correo" name="correo" autocomplete="email" placeholder="ejemplo@campus.com" data-i18n-placeholder="emailinput">
                 </p>
                 <p class="input-group">
                     <label for="pass" data-i18n="password">Contraseña</label>
-                    <input type="password" id="pass" name="pass" placeholder="Contraseña" data-i18n-placeholder="passwordinput">
+                    <input type="password" id="pass" name="pass" autocomplete="current-password" placeholder="Contraseña" data-i18n-placeholder="passwordinput">
                 </p>
-                <button type="submit" class="btn-login" formaction="../alumno/misIncidencias.html" data-i18n = "estudiante">ESTUDIANTE</button>
-                <button type="submit" class="btn-login" formaction="../profe/gestionAlumnos.html" data-i18n = "profesor">PROFESOR</button>
-                <button type="submit" class="btn-login" formaction="../tecnico/tecnicoIncidencias.html" data-i18n = "tecnico">TÉCNICO</button>
+                <button type="submit" class="btn-login" formaction="../alumno/misIncidencias.html" data-rol="alumno" data-i18n="estudiante">ESTUDIANTE</button>
+                <button type="submit" class="btn-login" formaction="../profe/gestionAlumnos.html" data-rol="profesor" data-i18n="profesor">PROFESOR</button>
+                <button type="submit" class="btn-login" formaction="../tecnico/tecnicoIncidencias.html" data-rol="tecnico" data-i18n="tecnico">TÉCNICO</button>
             </form>
         </section>
     </main>

@@ -1,0 +1,203 @@
+[
+ {
+  "pagina": "alumno/formularioTicket.html",
+  "title": "Nueva Incidencia | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 1,
+  "problemas": [],
+  "robots": null,
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "alumno/misEquipos.html",
+  "title": "Mis Equipos | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 1,
+  "problemas": [
+   "salto de encabezado h1->h3"
+  ],
+  "robots": null,
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "alumno/misIncidencias.html",
+  "title": "Mi Historial | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 1,
+  "problemas": [
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "tabla sin caption"
+  ],
+  "robots": null,
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "comun/dashboard.html",
+  "title": "Dashboard | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 4,
+  "problemas": [],
+  "robots": null,
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "comun/index.html",
+  "title": "ClicArte - Iniciar Sesión",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 1,
+  "problemas": [],
+  "robots": null,
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "comun/verTicket.html",
+  "title": "Detalle del Ticket | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 1,
+  "problemas": [
+   "label sin control",
+   "label sin control",
+   "label sin control",
+   "label sin control",
+   "label sin control"
+  ],
+  "robots": null,
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "profe/gestionAlumnos.html",
+  "title": "Gestión de Alumnos | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "tabla sin caption"
+  ],
+  "robots": null,
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "profe/gestionAulas.html",
+  "title": "Gestión de Aulas | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [],
+  "robots": null,
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "profe/profesorEquipos.html",
+  "title": "Gestión de Equipos | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "tabla sin caption"
+  ],
+  "robots": null,
+  "description": false,
+  "title_unico": false
+ },
+ {
+  "pagina": "profe/profesorIncidencias.html",
+  "title": "Incidencias | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "tabla sin caption"
+  ],
+  "robots": null,
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "tecnico/editarTicket.html",
+  "title": "Gestionar Ticket | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 1,
+  "problemas": [
+   "salto de encabezado h1->h3"
+  ],
+  "robots": null,
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "tecnico/tecnicoEquipos.html",
+  "title": "Gestión de Equipos | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 1,
+  "problemas": [
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "tabla sin caption"
+  ],
+  "robots": null,
+  "description": false,
+  "title_unico": false
+ },
+ {
+  "pagina": "tecnico/tecnicoIncidencias.html",
+  "title": "Gestión de Incidencias | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 1,
+  "problemas": [
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "th sin scope",
+   "tabla sin caption"
+  ],
+  "robots": null,
+  "description": false,
+  "title_unico": true
+ }
+]

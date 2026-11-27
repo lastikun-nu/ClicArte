@@ -3,60 +3,52 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Detalle del Ticket | ClicArte</title>
+        <meta name="robots" content="noindex, nofollow">
+        <title>Detalle del ticket | ClicArte</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/theme.js"></script>
         <script src="../js/sidebar.js" defer></script>
         <script src="../js/nuno.js" defer></script>
     </head>
 <body class="page-app">
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
     <section class="app-shell">
         <aside class="sidebar">
-        <header class="logopaginas">
-            <a href="dashboard.html">
-                <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte">
-            </a>
-        </header>
-            <nav class="sidebar-nav" aria-label="Navegación principal" data-role="alumno" data-active="historial"></nav>
-            <a href="index.html" class="logout" data-i18n="cerrarsesion">Cerrar Sesión</a>
+            <header class="logopaginas">
+                <a href="../comun/dashboard.html">
+                    <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte, ir al panel principal">
+                </a>
+            </header>
+            <nav class="sidebar-nav" aria-label="Navegación principal" data-role="auto" data-active="historial"></nav>
+            <a href="../comun/index.html" class="logout" data-i18n="cerrarsesion">Cerrar Sesión</a>
         </aside>
-    <main class="content-wrapper">
-        <div class="selector-idioma-alumno">
-        <button type="button" data-lang="zh">中文</button>
-        <button type="button" data-lang="es">Español</button>
-        <button type="button" data-lang="en">English</button>
-       <button type="button" id="theme-toggle" aria-label="Cambiar a tema claro">
-              <i class="fa-solid fa-circle-half-stroke"></i>
-        </button>
-        </div>
-        <header class="top-header">
-            <h1 data-i18n="detalleTicket">Detalle del Ticket</h1>
-            <span class="user-info" data-i18n="userNormal">Usuario</span>
-        </header>
-            <section class="main-content">
+        <main class="content-wrapper">
+            <section class="barra-preferencias" aria-label="Idioma y tema">
+                <button type="button" data-lang="zh" lang="zh" aria-pressed="false">中文</button>
+                <button type="button" data-lang="es" lang="es" aria-pressed="true">Español</button>
+                <button type="button" data-lang="en" lang="en" aria-pressed="false">English</button>
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false"><i class="fa-solid fa-moon" aria-hidden="true"></i>Tema oscuro</button>
+            </section>
+            <header class="top-header">
+                <h1 data-i18n="detalleTicket">Detalle del Ticket</h1>
+                <p class="user-info" data-i18n="userNormal">Usuario</p>
+            </header>
+            <section class="main-content" id="contenido">
                 <article class="widget form-container">
-                    <a href="../alumno/misIncidencias.html" class="btn-volver" data-i18n="backlist">&larr; Volver al Listado</a>
+                    <a href="../alumno/misIncidencias.html" class="enlace-volver" data-i18n="backlist">&larr; Volver al Listado</a>
                     <h2 data-i18n="ticketinfo">Detalle del Ticket Nº #</h2>
-                    <h2 data-i18n="solicitudinfo">Detalles de la Solicitud</h2>
-                    <section class="form-grid-2-col">
-                        <p class="form-group">
-                            <label data-i18n="creadoinfo">Creado por:</label><strong>#</strong>
-                        </p>
-                        <p class="form-group">
-                            <label data-i18n="equipoinfo">Equipo:</label><strong>#</strong>
-                        </p>
-                        <p class="form-group">
-                            <label data-i18n="ubicacion">Ubicación:</label><strong>Planta # - Aula #</strong>
-                        </p>
-                        <p class="form-group">
-                            <label data-i18n="estadoinfo">Estado:</label><strong>#</strong>
-                        </p>
-                        <p class="form-group">
-                            <label data-i18n="descripcioninfo">Descripción:</label><strong>#</strong>
-                        </p>
-                    </section>
+                    <h3 data-i18n="solicitudinfo">Detalles de la Solicitud</h3>
+                    <dl class="ticket-datos">
+                        <dt data-i18n="creadoinfo">Creado por:</dt><dd>#</dd>
+                        <dt data-i18n="equipoinfo">Equipo:</dt><dd>#</dd>
+                        <dt data-i18n="ubicacion">Ubicación:</dt><dd>Planta # - Aula #</dd>
+                        <dt data-i18n="estadoinfo">Estado:</dt><dd>#</dd>
+                        <dt data-i18n="descripcioninfo">Descripción:</dt><dd>#</dd>
+                    </dl>
                 </article>
             </section>
-    </main>
+        </main>
     </section>
 </body>
 </html>

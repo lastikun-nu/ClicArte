@@ -3,48 +3,61 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gestión de Incidencias | ClicArte</title>
+        <meta name="robots" content="noindex, nofollow">
+        <title>Gestión de incidencias (técnico) | ClicArte</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/theme.js"></script>
         <script src="../js/sidebar.js" defer></script>
     </head>
 <body class="page-app">
-    <section class="dashboard-container">
-         <aside class="sidebar">
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+    <section class="app-shell">
+        <aside class="sidebar">
             <header class="logopaginas">
                 <a href="../comun/dashboard.html">
-                <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte"></a>
+                    <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte, ir al panel principal">
+                </a>
             </header>
             <nav class="sidebar-nav" aria-label="Navegación principal" data-role="tecnico" data-active="incidencias"></nav>
             <a href="../comun/index.html" class="logout">Cerrar Sesión</a>
         </aside>
         <main class="content-wrapper">
-            <div class="selector-idioma-alumno">
-                <button type="button" id="theme-toggle" aria-label="Cambiar tema">Dark</button>
-            </div>
+            <section class="barra-preferencias" aria-label="Idioma y tema">
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false"><i class="fa-solid fa-moon" aria-hidden="true"></i>Tema oscuro</button>
+            </section>
             <header class="top-header">
-                <h1>Gestión de Incidencias</h1>
-                <span class="user-info">Técnico</span>
+                <h1>Gestión de incidencias</h1>
+                <p class="user-info">Técnico</p>
             </header>
-            <section class="main-content">
-                <p><a href="../alumno/formularioTicket.html" class="button">Crear Nueva Incidencia/Solicitud</a></p>
+            <section class="main-content" id="contenido">
+                <p><a href="../alumno/formularioTicket.html" class="button">Crear nueva incidencia o solicitud</a></p>
                 <p>Aquí puedes gestionar todas las incidencias y solicitudes del centro.</p>
-                <table><thead>
-                    <tr><th>Nº</th>
-                        <th>Estado</th>
-                        <th>Tipo</th>
-                        <th>Creado por</th>
-                        <th>Fecha Creación</th>
-                        <th>Acción</th>
-                    </tr></thead>
-                    <tbody><tr>
-                        <td>#</td>
-                        <td><span class="estado-badge bg-rojo">#</span></td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td><a href="editarTicket.html" class="btn-gestionar">Gestionar</a></td>
-                    </tr></tbody>
-                </table>
+                <section class="table-container" role="region" aria-labelledby="caption-gestion-incidencias" tabindex="0">
+                    <table>
+                        <caption id="caption-gestion-incidencias">Incidencias y solicitudes pendientes de gestionar</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nº</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">Creado por</th>
+                                <th scope="col">Fecha Creación</th>
+                                <th scope="col">Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#</td>
+                                <td><span class="estado-badge bg-rojo">#</span></td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td><a href="editarTicket.html" class="btn-consultar">Gestionar</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
             </section>
         </main>
     </section>

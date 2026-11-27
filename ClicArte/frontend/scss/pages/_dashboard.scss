@@ -1,10 +1,10 @@
-//Css de dasboard, de momento widget solo sirve para dashboard, si hay mas pagina web van a usa, movemos a carpeta components.
- 
-
+// Panel principal (dashboard). El menú lateral está en layout/_layout.scss
+// y lo genera sidebar.js como en el resto de vistas.
+@use "../abstracts/variables" as vars;
 
 .dashboard-widgets {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
@@ -18,7 +18,7 @@
 
 .widget h3 {
     margin-top: 0;
-    color: var(--color-brand);
+    color: var(--color-brand-text);
 }
 
 .widget p {
@@ -26,84 +26,17 @@
     color: var(--color-muted);
 }
 
+.widget hr {
+    border: 0;
+    border-top: 1px solid var(--color-border);
+}
+
 .widget a.button {
-    margin-top: 15px;
-    background-color: var(--color-brand);
+    margin: 15px 8px 0 0;
 }
 
-.widget a.button:hover {
-    background-color: var(--color-brand-dark);
-}
-
-@media (max-width: 760px) {
+@media (max-width: vars.$bp-mobile) {
     .dashboard-widgets {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* MENÚ LATERAL DESPLEGABLE*/
-
-.app-shell {
-    display: flex;
-    min-height: 100vh;
-}
-
-.sidebar {
-    position: relative;
-    flex-shrink: 0;
-    transition: width 0.3s ease, min-width 0.3s ease;
-}
-
-.sidebar-toggle {
-    display: block;
-    margin: 12px;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 6px;
-    background: #F39C12;
-    color: #1E2530;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-.sidebar-toggle:hover {
-    background: #E67E22;
-}
-
-/* Menú contraído */
-.sidebar.collapsed {
-    width: 70px;
-    min-width: 70px;
-}
-
-/* Ocultar el logotipo y los textos */
-.sidebar.collapsed .brand,
-.sidebar.collapsed .nav-link span {
-    display: none;
-}
-
-/* Centrar los iconos */
-.sidebar.collapsed .nav-link {
-    justify-content: center;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.sidebar.collapsed .nav-link img {
-    margin: 0;
-}
-
-/* El contenido ocupa el espacio disponible */
-.content-wrapper {
-    flex: 1;
-    min-width: 0;
-}
-
-/* En móviles, el menú también puede contraerse */
-@media (max-width: 768px) {
-    .sidebar.collapsed {
-        width: 60px;
-        min-width: 60px;
+        grid-template-columns: minmax(0, 1fr);
     }
 }

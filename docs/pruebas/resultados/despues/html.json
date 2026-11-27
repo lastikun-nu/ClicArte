@@ -1,0 +1,145 @@
+[
+ {
+  "pagina": "alumno/formularioTicket.html",
+  "title": "Nueva incidencia o solicitud | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [],
+  "robots": "noindex, nofollow",
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "alumno/misEquipos.html",
+  "title": "Mis equipos | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [],
+  "robots": "noindex, nofollow",
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "alumno/misIncidencias.html",
+  "title": "Mi historial de incidencias | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [],
+  "robots": "noindex, nofollow",
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "comun/dashboard.html",
+  "title": "Panel principal | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [],
+  "robots": "noindex, nofollow",
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "comun/index.html",
+  "title": "Iniciar sesión | ClicArte, gestión de equipos e incidencias",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [],
+  "robots": "index, follow",
+  "description": true,
+  "title_unico": true
+ },
+ {
+  "pagina": "comun/verTicket.html",
+  "title": "Detalle del ticket | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [],
+  "robots": "noindex, nofollow",
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "profe/gestionAlumnos.html",
+  "title": "Gestión de alumnos y profesores | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [],
+  "robots": "noindex, nofollow",
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "profe/gestionAulas.html",
+  "title": "Gestión de aulas | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [],
+  "robots": "noindex, nofollow",
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "profe/profesorEquipos.html",
+  "title": "Equipos del centro (profesorado) | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [],
+  "robots": "noindex, nofollow",
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "profe/profesorIncidencias.html",
+  "title": "Incidencias del centro (profesorado) | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [],
+  "robots": "noindex, nofollow",
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "tecnico/editarTicket.html",
+  "title": "Gestionar ticket | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [],
+  "robots": "noindex, nofollow",
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "tecnico/tecnicoEquipos.html",
+  "title": "Inventario de equipos (técnico) | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [],
+  "robots": "noindex, nofollow",
+  "description": false,
+  "title_unico": true
+ },
+ {
+  "pagina": "tecnico/tecnicoIncidencias.html",
+  "title": "Gestión de incidencias (técnico) | ClicArte",
+  "css": "../css/main.css",
+  "css_ok": true,
+  "divs": 0,
+  "problemas": [],
+  "robots": "noindex, nofollow",
+  "description": false,
+  "title_unico": true
+ }
+]

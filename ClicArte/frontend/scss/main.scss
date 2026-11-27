@@ -1,4 +1,5 @@
-//Relaciona todos archivos de scss
+// Punto de entrada: reúne todos los parciales en el orden de la cascada.
+// Compilar desde frontend/:  sass scss/main.scss css/main.css --source-map
 @use "abstracts/variables";
 @use "base/base";
 @use "layout/layout";
@@ -6,8 +7,8 @@
 @use "components/forms";
 @use "components/messages";
 @use "components/tables";
+@use "components/busqueda";
 @use "pages/login";
 @use "pages/dashboard";
 @use "pages/aulas";
 @use "pages/equipos";
-@use "components/busqueda";

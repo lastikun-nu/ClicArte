@@ -3,76 +3,87 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gestión de Alumnos | ClicArte</title>
+        <meta name="robots" content="noindex, nofollow">
+        <title>Gestión de alumnos y profesores | ClicArte</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/theme.js"></script>
         <script src="../js/sidebar.js" defer></script>
+        <script src="../js/form-feedback.js" defer></script>
     </head>
 <body class="page-app">
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
     <section class="app-shell">
         <aside class="sidebar">
             <header class="logopaginas">
                 <a href="../comun/dashboard.html">
-                    <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte">
+                    <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte, ir al panel principal">
                 </a>
             </header>
             <nav class="sidebar-nav" aria-label="Navegación principal" data-role="profesor" data-active="alumnos"></nav>
             <a href="../comun/index.html" class="logout">Cerrar Sesión</a>
         </aside>
         <main class="content-wrapper">
+            <section class="barra-preferencias" aria-label="Idioma y tema">
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false"><i class="fa-solid fa-moon" aria-hidden="true"></i>Tema oscuro</button>
+            </section>
             <header class="top-header">
-                <h1>Gestión de Alumnos</h1>
-                <span class="user-info">Profesor</span>
+                <h1>Gestión de alumnos y profesores</h1>
+                <p class="user-info">Profesor</p>
             </header>
-            <section class="main-content">
-                <details>
-                    <summary>Añadir Nuevo Usuario (Alumno/Profesor)</summary>
+            <section class="main-content" id="contenido">
+                <details class="panel-desplegable">
+                    <summary>Añadir nuevo usuario (alumno o profesor)</summary>
                     <article class="form-container">
-                        <form action="#" method="post">
+                        <form action="#" method="post" data-validar>
                             <section class="form-grid">
                                 <p>
-                                    <label for="nombre">Nombre:</label>
-                                    <input type="text" id="nombre" name="nombre">
+                                    <label for="nombre">Nombre <span class="obligatorio">(obligatorio)</span></label>
+                                    <input type="text" id="nombre" name="nombre" autocomplete="given-name" required>
                                 </p>
                                 <p>
-                                    <label for="apellidos">Apellidos:</label>
-                                    <input type="text" id="apellidos" name="apellidos">
+                                    <label for="apellidos">Apellidos <span class="obligatorio">(obligatorio)</span></label>
+                                    <input type="text" id="apellidos" name="apellidos" autocomplete="family-name" required>
                                 </p>
                                 <p>
-                                    <label for="correo">Correo:</label>
-                                    <input type="email" id="correo" name="correo">
+                                    <label for="correo">Correo <span class="obligatorio">(obligatorio)</span></label>
+                                    <input type="email" id="correo" name="correo" autocomplete="email" required>
                                 </p>
                                 <p>
-                                    <label for="rol">Rol:</label>
+                                    <label for="rol">Rol</label>
                                     <select id="rol" name="rol">
                                         <option>Alumno</option>
                                         <option>Profesor</option>
                                     </select>
                                 </p>
                             </section>
-                    <button type="submit">Guardar Usuario</button>
+                            <button type="submit" class="btn-submit">Guardar usuario</button>
                         </form>
                     </article>
                 </details>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Apellidos</th>
-                            <th>Curso</th>
-                            <th>Especialidad</th>
-                            <th>Turno</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>#</td>
-                            <td>#</td>
-                            <td>#</td>
-                            <td>#</td>
-                            <td>#</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <section class="table-container" role="region" aria-labelledby="caption-usuarios" tabindex="0">
+                    <table>
+                        <caption id="caption-usuarios">Alumnado y profesorado registrado</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellidos</th>
+                                <th scope="col">Curso</th>
+                                <th scope="col">Especialidad</th>
+                                <th scope="col">Turno</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
             </section>
         </main>
     </section>

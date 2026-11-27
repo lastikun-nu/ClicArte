@@ -1,0 +1,12 @@
+/* Experimento CE2B: hoja externa del botón de prueba (no forma parte del producto). */
+.btn-prueba {
+    color: #ffffff;
+    padding: 12px 20px;
+    background: #e58a1f;
+}
+
+/* Regla que compite con la propiedad background de los dos botones. */
+#b1,
+#b2 {
+    background: #243447;
+}

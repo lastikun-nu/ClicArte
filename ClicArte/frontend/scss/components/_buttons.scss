@@ -1,7 +1,8 @@
-// Este parte incluido css de los botones, entre los botones hay diferentes tipos de botones.
+// Botones. Convención: .button / .btn-* para acciones; variantes como clase añadida (.success).
 @use "../abstracts/variables" as vars;
 
-@mixin button-base($bg-color, $text-color: #fff, $radius: 5px) {
+// Propiedades comunes de todos los botones de acción.
+@mixin button-base($bg-color: var(--color-brand), $text-color: var(--color-on-brand), $radius: 5px) {
     display: inline-block;
     background-color: $bg-color;
     color: $text-color;
@@ -15,39 +16,65 @@
     transition: background-color 0.3s, transform 0.2s;
 }
 
-@mixin button-variant($bg-color, $hover-color) {
+// Variante de color con su estado hover.
+@mixin button-variant($bg-color, $hover-color, $text-color: var(--color-on-brand)) {
     background-color: $bg-color;
+    color: $text-color;
 
     &:hover {
         background-color: $hover-color;
     }
 }
 
-a.button,
-a.button.success {
-    @include button-base(#2ECC71);
+// Acción principal enlazada (crear, ver historial...).
+a.button {
+    @include button-base;
+
+    &:hover {
+        background-color: var(--color-brand-dark);
+    }
 }
 
-a.button:hover {
-    background-color: #27AE60;
+a.button.success {
+    @include button-variant(var(--color-success), var(--color-success-hover), var(--color-on-dark));
 }
 
 .btn-login {
+    @include button-base(var(--color-brand), var(--color-on-brand), 30px);
+    // Las declaraciones propias van DESPUÉS del mixin para que ganen en la cascada.
     width: 100%;
-    @include button-base(vars(--color-brand), #fff, 30px);
     padding: 15px;
     font-size: 16px;
     margin-top: 10px;
     text-transform: uppercase;
 
     &:hover {
-        background-color: vars(--color-brand-dark);
+        background-color: var(--color-brand-dark);
         transform: translateY(-2px);
     }
 }
 
-.btn-consultar {
-    color: #005a9c;
+// Botón de envío de formularios. Corregido: el padding se declara después del mixin.
+.btn-submit {
+    @include button-base;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+
+    &:hover {
+        background-color: var(--color-brand-dark);
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+// Enlaces de acción dentro de tablas y enlaces de vuelta.
+.btn-consultar,
+.enlace-volver {
+    color: var(--color-link);
     font-weight: bold;
     text-decoration: none;
 
@@ -56,78 +83,46 @@ a.button:hover {
     }
 }
 
-.btn-submit {
-    width: 100%;
-    padding: 12px 20px;
-    @include button-base(vars(--color-brand));
-    border-radius: 5px;
-    font-size: 16px;
-
-    &:hover {
-        background-color: vars(--color-brand-dark);
-    }
+.enlace-volver {
+    display: inline-block;
+    margin-bottom: 12px;
 }
 
+// Botones secundarios de idioma y tema (fondo neutro, borde).
+.selector-idioma,
+.barra-preferencias {
+    button {
+        min-height: 40px;
+        padding: 8px 14px;
+        border: 1px solid var(--color-field-border);
+        border-radius: 30px;
+        background-color: var(--color-surface);
+        color: var(--color-ink);
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.25s ease, border-color 0.25s ease;
+
+        &:hover {
+            border-color: var(--color-brand);
+        }
+
+        &[aria-pressed="true"] {
+            background-color: var(--color-brand);
+            border-color: var(--color-brand);
+            color: var(--color-on-brand);
+        }
+    }
+}
 
 .selector-idioma {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-
-    button {
-        background-color: #ff951d;
-        color: #ffffff;
-        border: none;
-        border-radius: 30px;
-        padding: 10px 15px;
-        font-size: 14px;
-        font-weight: 600;
-        font-family: inherit;
-        cursor: pointer;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-        margin-bottom: 10px;
-        &:hover {
-            background-color: #aa5403;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-        }
-
-        &:active {
-            transform: translateY(0);
-        }
-    }
+    gap: 8px;
+    margin: 10px 0 16px;
 }
 
-.selector-idioma-alumno {
-
-    position: absolute;
-    right: 0;
-    gap: 10px;
-    margin-top: 10px;
-   top: 0;
-    button {
-        background-color: #ff951d;
-        color: #ffffff;
-        border: none;
-        border-radius: 30px;
-        padding: 10px 15px;
-        font-size: 14px;
-        font-weight: 600;
-        font-family: inherit;
-        cursor: pointer;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-        margin-bottom: 10px;
-        &:hover {
-            background-color: #aa5403;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-        }
-
-        &:active {
-            transform: translateY(0);
-        }
-    }
+.theme-toggle i {
+    margin-right: 6px;
 }

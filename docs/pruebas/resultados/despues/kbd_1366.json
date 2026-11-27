@@ -1,0 +1,368 @@
+{
+ "T1_login": {
+  "tabs_hasta_correo": 5,
+  "secuencia": [
+   {
+    "el": "button",
+    "name": "中文",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "comun/index.html"
+   },
+   {
+    "el": "button",
+    "name": "Español",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "comun/index.html"
+   },
+   {
+    "el": "button",
+    "name": "English",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "comun/index.html"
+   },
+   {
+    "el": "button#theme-toggle.theme-toggle",
+    "name": "Tema oscuro",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "comun/index.html"
+   },
+   {
+    "el": "input#correo",
+    "name": "ejemplo@campus.com",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "comun/index.html"
+   }
+  ],
+  "tabs_hasta_boton": 1,
+  "secuencia2": [
+   {
+    "el": "button.btn-login",
+    "name": "ESTUDIANTE",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "comun/index.html"
+   }
+  ],
+  "url_final": "alumno/misIncidencias.html"
+ },
+ "T2_formulario_vacio": {
+  "tabs_hasta_primer_campo": 13,
+  "secuencia": [
+   {
+    "el": "a.skip-link",
+    "name": "Saltar al contenido principal",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "button.sidebar-toggle",
+    "name": "Contraer menú",
+    "ring": true,
+    "outline": "solid 3px rgb(255, 196, 110)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "a",
+    "name": "",
+    "ring": true,
+    "outline": "solid 3px rgb(255, 196, 110)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "a",
+    "name": "Dashboard",
+    "ring": true,
+    "outline": "solid 3px rgb(255, 196, 110)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "a",
+    "name": "Equipos",
+    "ring": true,
+    "outline": "solid 3px rgb(255, 196, 110)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "a",
+    "name": "Mi Historial",
+    "ring": true,
+    "outline": "solid 3px rgb(255, 196, 110)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "a.activo",
+    "name": "Incidencias/Solicitudes",
+    "ring": true,
+    "outline": "solid 3px rgb(255, 196, 110)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "a.logout",
+    "name": "Cerrar Sesión",
+    "ring": true,
+    "outline": "solid 3px rgb(255, 196, 110)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "button",
+    "name": "中文",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "button",
+    "name": "Español",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "button",
+    "name": "English",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "button#theme-toggle.theme-toggle",
+    "name": "Tema oscuro",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   },
+   {
+    "el": "select#tipo",
+    "name": "Reportar una Incidencia Hacer una Solici",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "alumno/formularioTicket.html"
+   }
+  ],
+  "tabs_campo_a_boton": 3,
+  "resultado_envio": {
+   "mensaje": "Revisa estos campos antes de enviar:Equipo afectado: elige una opción de la listaDescripción detallada: este campo es ob",
+   "foco": "SELECT#equipo",
+   "url": null
+  }
+ },
+ "T2_shift_tab": [
+  {
+   "el": "select#tipo",
+   "name": "Reportar una Incidencia Hacer una Solici",
+   "ring": true,
+   "outline": "solid 3px rgb(11, 87, 208)",
+   "inView": true,
+   "url": "alumno/formularioTicket.html"
+  },
+  {
+   "el": "a",
+   "name": "Descripción detallada: este campo es obl",
+   "ring": true,
+   "outline": "solid 3px rgb(11, 87, 208)",
+   "inView": true,
+   "url": "alumno/formularioTicket.html"
+  },
+  {
+   "el": "a",
+   "name": "Equipo afectado: elige una opción de la ",
+   "ring": true,
+   "outline": "solid 3px rgb(11, 87, 208)",
+   "inView": true,
+   "url": "alumno/formularioTicket.html"
+  }
+ ],
+ "T2b_con_salto": {
+  "primer_foco": {
+   "el": "a.skip-link",
+   "name": "Saltar al contenido principal",
+   "ring": true,
+   "outline": "solid 3px rgb(11, 87, 208)",
+   "inView": true,
+   "url": "alumno/formularioTicket.html"
+  },
+  "tabs_tras_saltar": 1
+ },
+ "T4_menu": {
+  "tabs_hasta_boton_menu": 2,
+  "inicial": {
+   "expanded": "true",
+   "label": "Contraer menú",
+   "menuVisible": true
+  },
+  "tras_enter": {
+   "expanded": "false",
+   "label": "Desplegar menú",
+   "menuVisible": true
+  },
+  "siguiente_foco": {
+   "el": "a",
+   "name": "Dashboard",
+   "ring": true,
+   "outline": "solid 3px rgb(255, 196, 110)",
+   "inView": true,
+   "url": "alumno/misIncidencias.html"
+  },
+  "tras_escape": {
+   "expanded": "false",
+   "menuVisible": true,
+   "foco": ""
+  }
+ },
+ "T3_consultar": {
+  "tabs_hasta_consultar": 15,
+  "secuencia": [
+   {
+    "el": "a.skip-link",
+    "name": "Saltar al contenido principal",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "button.sidebar-toggle",
+    "name": "Contraer menú",
+    "ring": true,
+    "outline": "solid 3px rgb(255, 196, 110)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "a",
+    "name": "",
+    "ring": true,
+    "outline": "solid 3px rgb(255, 196, 110)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "a",
+    "name": "Dashboard",
+    "ring": true,
+    "outline": "solid 3px rgb(255, 196, 110)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "a",
+    "name": "Equipos",
+    "ring": true,
+    "outline": "solid 3px rgb(255, 196, 110)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "a.activo",
+    "name": "Mi Historial",
+    "ring": true,
+    "outline": "solid 3px rgb(255, 196, 110)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "a",
+    "name": "Incidencias/Solicitudes",
+    "ring": true,
+    "outline": "solid 3px rgb(255, 196, 110)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "a.logout",
+    "name": "Cerrar Sesión",
+    "ring": true,
+    "outline": "solid 3px rgb(255, 196, 110)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "button",
+    "name": "中文",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "button",
+    "name": "Español",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "button",
+    "name": "English",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "button#theme-toggle.theme-toggle",
+    "name": "Tema oscuro",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "a.button",
+    "name": "Crear Nueva Incidencia",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "section.table-container",
+    "name": "Mis incidencias y solicitudes, de la más",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   },
+   {
+    "el": "a.btn-consultar",
+    "name": "Consultar",
+    "ring": true,
+    "outline": "solid 3px rgb(11, 87, 208)",
+    "inView": true,
+    "url": "alumno/misIncidencias.html"
+   }
+  ],
+  "url_final": "comun/verTicket.html"
+ },
+ "_resumen": {
+  "focos_registrados": 34,
+  "sin_anillo": [],
+  "fuera_de_vista": []
+ }
+}

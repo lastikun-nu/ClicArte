@@ -101,3 +101,24 @@ De esta manera, tanto el código como la documentación avanzan de forma paralel
 https://www.w3school.com.cn/
 https://www.w3schools.com/
 https://chatgpt.com/
+
+---
+
+## Compilación de los estilos
+
+Los estilos fuente están en `ClicArte/frontend/scss` (abstracts, base, layout, components, pages).
+Para regenerar la hoja que enlazan las 13 vistas, desde `ClicArte/frontend`:
+
+```bash
+sass scss/main.scss css/main.css --source-map
+```
+
+Todos los colores pasan por los tokens de `scss/abstracts/_variables.scss`; el tema oscuro
+solo redefine esos tokens bajo `[data-theme="dark"]` y la preferencia se guarda en
+`localStorage` (`js/theme.js`).
+
+## Pruebas
+
+Los scripts y resultados de las pruebas automáticas (contraste, responsive, teclado, cascada y
+HTML) están en [`docs/pruebas`](docs/pruebas/README.md). El experimento de estilos inline (CE2B)
+está en `docs/experimentos/ce2b-inline.html` y no forma parte del producto.

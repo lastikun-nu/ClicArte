@@ -3,55 +3,63 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mi Historial | ClicArte</title>
+        <meta name="robots" content="noindex, nofollow">
+        <title>Mi historial de incidencias | ClicArte</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/theme.js"></script>
         <script src="../js/sidebar.js" defer></script>
         <script src="../js/nuno.js" defer></script>
     </head>
 <body class="page-app">
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
     <section class="app-shell">
-        <aside class="sidebar"><header class="logopaginas">
-            <a href="../comun/dashboard.html">
-                <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte">
-            </a>
+        <aside class="sidebar">
+            <header class="logopaginas">
+                <a href="../comun/dashboard.html">
+                    <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte, ir al panel principal">
+                </a>
             </header>
             <nav class="sidebar-nav" aria-label="Navegación principal" data-role="alumno" data-active="historial"></nav>
             <a href="../comun/index.html" class="logout" data-i18n="cerrarsesion">Cerrar Sesión</a>
         </aside>
         <main class="content-wrapper">
-            <div class="selector-idioma-alumno">
-            <button type="button" data-lang="zh">中文</button>
-            <button type="button" data-lang="es">Español</button>
-            <button type="button" data-lang="en">English</button>
-            <button type="button" id="theme-toggle" aria-label="Cambiar a tema claro">
-                     <i class="fa-solid fa-circle-half-stroke"></i>
-            </button>
-            </div>
-        <header class="top-header">
-            <h1 data-i18n="history">Historial de Incidencias</h1>
-            <span class="user-info" data-i18n="userNormal">Usuario</span>
-        </header>
-        <section class="main-content">
-            <p><a href="formularioTicket.html" class="button" data-i18n="toincidencia">Crear Nueva Incidencia</a></p>
-            <table>
-                <thead>
-                    <tr><th>Nº</th>
-                        <th data-i18n="tipo">Tipo</th>
-                        <th data-i18n="estado">Estado</th>
-                        <th data-i18n="fecha">Fecha Creación</th>
-                        <th data-i18n="accion">Acción</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>#</td>
-                        <td>#</td>
-                        <td><span class="estado-badge bg-rojo">#</span></td>
-                        <td>#</td>
-                        <td><a href="../comun/verTicket.html" class="btn-consultar" data-i18n="consultar">Consultar</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+            <section class="barra-preferencias" aria-label="Idioma y tema">
+                <button type="button" data-lang="zh" lang="zh" aria-pressed="false">中文</button>
+                <button type="button" data-lang="es" lang="es" aria-pressed="true">Español</button>
+                <button type="button" data-lang="en" lang="en" aria-pressed="false">English</button>
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false"><i class="fa-solid fa-moon" aria-hidden="true"></i>Tema oscuro</button>
+            </section>
+            <header class="top-header">
+                <h1 data-i18n="history">Historial de Incidencias</h1>
+                <p class="user-info" data-i18n="userNormal">Usuario</p>
+            </header>
+            <section class="main-content" id="contenido">
+                <p><a href="formularioTicket.html" class="button" data-i18n="toincidencia">Crear Nueva Incidencia</a></p>
+                <section class="table-container" role="region" aria-labelledby="caption-mis-incidencias" tabindex="0">
+                    <table>
+                        <caption id="caption-mis-incidencias">Mis incidencias y solicitudes, de la más reciente a la más antigua</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nº</th>
+                                <th scope="col" data-i18n="tipo">Tipo</th>
+                                <th scope="col" data-i18n="estado">Estado</th>
+                                <th scope="col" data-i18n="fecha">Fecha Creación</th>
+                                <th scope="col" data-i18n="accion">Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#</td>
+                                <td>#</td>
+                                <td><span class="estado-badge bg-rojo">#</span></td>
+                                <td>#</td>
+                                <td><a href="../comun/verTicket.html" class="btn-consultar" data-i18n="consultar">Consultar</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
         </main>
     </section>
 </body>

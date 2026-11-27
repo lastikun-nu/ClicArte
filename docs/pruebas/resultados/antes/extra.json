@@ -1,0 +1,166 @@
+{
+ "reflow320": {
+  "comun/index.html": 320,
+  "comun/dashboard.html": 409,
+  "comun/verTicket.html": 383,
+  "alumno/misIncidencias.html": 628,
+  "alumno/formularioTicket.html": 400,
+  "alumno/misEquipos.html": 393,
+  "profe/profesorEquipos.html": 740,
+  "profe/profesorIncidencias.html": 704,
+  "profe/gestionAlumnos.html": 694,
+  "profe/gestionAulas.html": 383,
+  "tecnico/tecnicoIncidencias.html": 453,
+  "tecnico/tecnicoEquipos.html": 740,
+  "tecnico/editarTicket.html": 435
+ },
+ "nombres": {
+  "comun/index.html": {
+   "controles": 9,
+   "sin_nombre": []
+  },
+  "comun/dashboard.html": {
+   "controles": 13,
+   "sin_nombre": []
+  },
+  "comun/verTicket.html": {
+   "controles": 12,
+   "sin_nombre": []
+  },
+  "alumno/misIncidencias.html": {
+   "controles": 13,
+   "sin_nombre": []
+  },
+  "alumno/formularioTicket.html": {
+   "controles": 15,
+   "sin_nombre": []
+  },
+  "alumno/misEquipos.html": {
+   "controles": 12,
+   "sin_nombre": []
+  },
+  "profe/profesorEquipos.html": {
+   "controles": 9,
+   "sin_nombre": []
+  },
+  "profe/profesorIncidencias.html": {
+   "controles": 10,
+   "sin_nombre": []
+  },
+  "profe/gestionAlumnos.html": {
+   "controles": 9,
+   "sin_nombre": []
+  },
+  "profe/gestionAulas.html": {
+   "controles": 8,
+   "sin_nombre": []
+  },
+  "tecnico/tecnicoIncidencias.html": {
+   "controles": 11,
+   "sin_nombre": []
+  },
+  "tecnico/tecnicoEquipos.html": {
+   "controles": 11,
+   "sin_nombre": []
+  },
+  "tecnico/editarTicket.html": {
+   "controles": 14,
+   "sin_nombre": []
+  }
+ },
+ "landmarks": {
+  "comun/index.html": [
+   "main",
+   "region:Iniciar Sesión"
+  ],
+  "comun/dashboard.html": [
+   "complementary:Navegación principal",
+   "banner",
+   "main",
+   "navigation:Navegación principal"
+  ],
+  "comun/verTicket.html": [
+   "main",
+   "navigation:Navegación principal"
+  ],
+  "alumno/misIncidencias.html": [
+   "main",
+   "navigation:Navegación principal"
+  ],
+  "alumno/formularioTicket.html": [
+   "main",
+   "navigation:Navegación principal"
+  ],
+  "alumno/misEquipos.html": [
+   "main",
+   "navigation:Navegación principal"
+  ],
+  "profe/profesorEquipos.html": [
+   "main",
+   "navigation:Navegación principal"
+  ],
+  "profe/profesorIncidencias.html": [
+   "main",
+   "navigation:Navegación principal"
+  ],
+  "profe/gestionAlumnos.html": [
+   "main",
+   "navigation:Navegación principal"
+  ],
+  "profe/gestionAulas.html": [
+   "main",
+   "navigation:Navegación principal"
+  ],
+  "tecnico/tecnicoIncidencias.html": [
+   "main",
+   "navigation:Navegación principal"
+  ],
+  "tecnico/tecnicoEquipos.html": [
+   "main",
+   "navigation:Navegación principal"
+  ],
+  "tecnico/editarTicket.html": [
+   "main",
+   "navigation:Navegación principal"
+  ]
+ },
+ "teclado_gestion": {
+  "tabs_hasta_gestionar": null,
+  "sin_anillo": [
+   "page-app",
+   "page-app"
+  ],
+  "secuencia": [
+   "Contraer menú",
+   "A",
+   "Dashboard",
+   "Equipos",
+   "Alumnos y profesores",
+   "Aulas",
+   "Incidencias/Solicitudes",
+   "Cerrar Sesión",
+   "Cambiar tema",
+   "Crear Nueva Incidencia/Solicit",
+   "Gestionar",
+   "☰\n            \n               ",
+   "Contraer menú",
+   "A",
+   "Dashboard",
+   "Equipos",
+   "Alumnos y profesores",
+   "Aulas",
+   "Incidencias/Solicitudes",
+   "Cerrar Sesión",
+   "Cambiar tema",
+   "Crear Nueva Incidencia/Solicit",
+   "Gestionar",
+   "☰\n            \n               ",
+   "Contraer menú",
+   "A",
+   "Dashboard",
+   "Equipos",
+   "Alumnos y profesores",
+   "Aulas"
+  ]
+ }
+}

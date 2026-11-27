@@ -1,10 +1,10 @@
-// Parte css de formularios
+// Formularios: contenedores, grupos, campos, cuadrícula y estados.
 @use "../abstracts/variables" as vars;
 
 @mixin card-base {
     background-color: var(--color-surface);
     border-radius: 8px;
-    box-shadow: $shadow-soft;
+    box-shadow: var(--shadow-soft);
 }
 
 .form-container {
@@ -19,35 +19,29 @@
     @include card-base;
 }
 
-
-/* Títulos */
-
-.form-container h1 {
+.form-container h1,
+.form-card h2 {
     margin-top: 0;
-    color: var(--color-brand);
+    color: var(--color-brand-text);
 }
-
-
-/* Grupos */
 
 .form-group {
-    margin-bottom: 20px;
+    margin: 0 0 20px;
 }
-
-
-/* Labels */
 
 .form-container label,
 .form-group label {
     display: block;
     margin-bottom: 5px;
-
     color: var(--color-ink);
     font-weight: bold;
 }
 
-
-/* Campos */
+.obligatorio {
+    color: var(--color-muted);
+    font-weight: normal;
+    font-size: 0.9em;
+}
 
 .form-container input[type="text"],
 .form-container input[type="email"],
@@ -60,24 +54,16 @@
 .form-group textarea {
     width: 100%;
     padding: 10px 12px;
-
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-field-border);
     border-radius: 5px;
-
-    box-sizing: border-box;
     margin-bottom: 15px;
-
     background-color: var(--color-surface);
     color: var(--color-ink);
-
-    transition:
-        border-color 0.3s,
-        background-color 0.3s;
+    transition: border-color 0.3s, background-color 0.3s;
 }
 
-
-/* Estado focus */
-
+// Estado foco: se cambia el borde y se MANTIENE el anillo de :focus-visible
+// (antes outline: none lo eliminaba y el foco no se veía con el teclado).
 .form-container input:focus,
 .form-container select:focus,
 .form-container textarea:focus,
@@ -85,23 +71,76 @@
 .form-group select:focus,
 .form-group textarea:focus {
     border-color: var(--color-brand);
-    outline: none;
-    background-color: var(--color-surface);
 }
 
+// Estado error: lo añade form-feedback.js con aria-invalid="true".
+.form-container [aria-invalid="true"],
+.form-group [aria-invalid="true"] {
+    border: 2px solid var(--color-error-border);
+}
 
-/* Grid */
-
+// Cuadrícula de formulario: 2 columnas (3 con .cols-3) y 1 columna en móvil.
 .form-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 15px;
 }
 
 .form-grid.cols-3 {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .form-grid .full-width {
     grid-column: 1 / -1;
+}
+
+.form-grid p {
+    margin: 0;
+}
+
+// Paneles desplegables "Añadir nuevo...".
+.panel-desplegable {
+    margin-bottom: 24px;
+}
+
+.panel-desplegable summary {
+    display: inline-block;
+    min-height: 44px;
+    padding: 10px 0;
+    color: var(--color-brand-text);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.panel-desplegable .form-container {
+    margin-top: 12px;
+}
+
+// Datos de solo lectura (detalle del ticket).
+.ticket-datos {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 10px 20px;
+    margin: 0 0 20px;
+}
+
+.ticket-datos dt {
+    font-weight: bold;
+}
+
+.ticket-datos dd {
+    margin: 0;
+}
+
+@media (max-width: vars.$bp-mobile) {
+    .form-grid,
+    .form-grid.cols-3,
+    .ticket-datos {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .form-container,
+    .form-card {
+        padding: 20px 16px;
+    }
 }

@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | ClicArte</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <script src="../js/sidebar.js" defer></script>
-    <script src="../js/nuno.js" defer></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="noindex, nofollow">
+        <title>Panel principal | ClicArte</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/theme.js"></script>
+        <script src="../js/sidebar.js" defer></script>
+        <script src="../js/nuno.js" defer></script>
+    </head>
 <body class="page-app">
-    <div class="app-shell">
-        <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+    <section class="app-shell">
+        <aside class="sidebar">
             <header class="logopaginas">
-                <a href="index.html">
-                    <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte">
+                <a href="../comun/dashboard.html">
+                    <img src="../IMGBLANCO/logo_completo_negativp.png" alt="ClicArte, ir al panel principal">
                 </a>
             </header>
-            <nav class="sidebar-nav" aria-label="Navegación principal" data-role="alumno" data-active="dashboard"></nav>
-            <a href="index.html" class="logout" data-i18n="cerrarsesion">Cerrar Sesión</a>
+            <nav class="sidebar-nav" aria-label="Navegación principal" data-role="auto" data-active="dashboard"></nav>
+            <a href="../comun/index.html" class="logout" data-i18n="cerrarsesion">Cerrar Sesión</a>
         </aside>
-        <div class="content-wrapper">
+        <main class="content-wrapper">
+            <section class="barra-preferencias" aria-label="Idioma y tema">
+                <button type="button" data-lang="zh" lang="zh" aria-pressed="false">中文</button>
+                <button type="button" data-lang="es" lang="es" aria-pressed="true">Español</button>
+                <button type="button" data-lang="en" lang="en" aria-pressed="false">English</button>
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false"><i class="fa-solid fa-moon" aria-hidden="true"></i>Tema oscuro</button>
+            </section>
             <header class="top-header">
-                <div>
+                <hgroup>
                     <p class="eyebrow">ClicArte</p>
                     <h1 data-i18n="actividad">Tu actividad en ClicArte</h1>
-                </div>
+                </hgroup>
                 <p class="user-info" data-i18n="userNormal">Usuario</p>
             </header>
-            <main class="main-content">
-
-                <div class="selector-idioma-alumno">
-                <button type="button" data-lang="zh">中文</button>
-                <button type="button" data-lang="es">Español</button>
-                <button type="button" data-lang="en">English</button>
-                <button type="button" id="theme-toggle" aria-label="Cambiar a tema claro">
-                     <i class="fa-solid fa-circle-half-stroke"></i>
-                </button>
-                </div>                
-
+            <section class="main-content" id="contenido">
                 <h2 data-i18n="dashbienvenido">Bienvenido, #</h2>
                 <section class="dashboard-widgets">
                     <article class="widget">
@@ -58,8 +58,8 @@
                         <p data-i18n="dashequipoinc">Equipos con incidencias: #</p>
                     </article>
                 </section>
-            </main>
-        </div>
-    </div>
+            </section>
+        </main>
+    </section>
 </body>
 </html>

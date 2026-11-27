@@ -1,41 +1,46 @@
-//Juntamos css de mensaje y estado(Son diferentes componentes pero tienen mismo funciona)
-
-.mensaje.success { 
-    background-color: #D4EDDA; 
-    color: #155724; 
-}
-
-.mensaje.error { 
-    background-color: #F8D7DA; 
-    color: #721C24; 
-}
-
+// Mensajes de estado (éxito/error) e insignias de estado de las incidencias.
 .mensaje {
-    padding: 10px;
+    padding: 12px 14px;
     border-radius: 5px;
     margin-bottom: 15px;
     font-weight: bold;
 }
 
+.mensaje.success {
+    background-color: var(--color-success-bg);
+    color: var(--color-success-text);
+}
+
+.mensaje.error {
+    background-color: var(--color-error-bg);
+    color: var(--color-error-text);
+}
+
+.mensaje ul {
+    margin: 6px 0 0;
+    padding-left: 20px;
+    font-weight: normal;
+}
+
 .estado-badge {
+    display: inline-block;
     padding: 4px 8px;
     border-radius: 12px;
-    color: white;
+    color: var(--color-on-dark);
     font-weight: bold;
     font-size: 0.85em;
     text-transform: uppercase;
-    display: inline-block;
 }
 
-.bg-finalizado { 
-    background-color: #28a745; 
+.bg-finalizado {
+    background-color: var(--color-success);
 }
 
-.bg-espera { 
-    background-color: #ffc107; 
-    color: #333; 
+.bg-espera {
+    background-color: var(--color-warning);
+    color: var(--color-on-brand);
 }
 
-.bg-rojo { 
-    background-color: #dc3545; 
+.bg-rojo {
+    background-color: var(--color-danger);
 }

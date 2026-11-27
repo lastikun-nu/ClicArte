@@ -80,6 +80,9 @@
         // Miro qué botón he pulsado (estudiante, profesor o técnico) y cojo su página de destino
         const destino = e.submitter?.getAttribute('formaction') || form.getAttribute('action');
 
+        // Guardo el perfil elegido para que las vistas comunes muestren su menú (sidebar.js)
+        try { sessionStorage.setItem('clicarte-rol', e.submitter?.dataset.rol || 'alumno'); } catch (err) { /* sin almacenamiento */ }
+
         // Desactivo todos los botones para que no se pueda hacer doble clic
         form.querySelectorAll('button').forEach(btn => { btn.disabled = true; });
 
