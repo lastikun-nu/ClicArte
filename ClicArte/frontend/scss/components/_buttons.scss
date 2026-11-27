@@ -109,7 +109,7 @@ a.button.success {
 
         &[aria-pressed="true"] {
             background-color: var(--color-brand);
-            border-color: var(--color-brand);
+            border-color: var(--color-brand-text);
             color: var(--color-on-brand);
         }
     }
