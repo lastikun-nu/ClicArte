@@ -133,7 +133,6 @@ summary:focus-visible,
     animation-iteration-count: 1;
   }
 }
-
 .app-shell {
   display: grid;
   grid-template-columns: minmax(210px, 250px) minmax(0, 1fr);
@@ -225,7 +224,6 @@ summary:focus-visible,
   font-size: 22px;
   cursor: pointer;
 }
-
 .sidebar-toggle:hover {
   background: var(--color-brand-dark);
 }
@@ -349,7 +347,6 @@ summary:focus-visible,
     justify-content: flex-start;
   }
 }
-
 a.button {
   display: inline-block;
   background-color: var(--color-brand);
@@ -363,7 +360,6 @@ a.button {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
 }
-
 a.button:hover {
   background-color: var(--color-brand-dark);
 }
@@ -372,7 +368,6 @@ a.button.success {
   background-color: var(--color-success);
   color: var(--color-on-dark);
 }
-
 a.button.success:hover {
   background-color: var(--color-success-hover);
 }
@@ -395,7 +390,6 @@ a.button.success:hover {
   margin-top: 10px;
   text-transform: uppercase;
 }
-
 .btn-login:hover {
   background-color: var(--color-brand-dark);
   transform: translateY(-2px);
@@ -417,11 +411,9 @@ a.button.success:hover {
   padding: 12px 20px;
   font-size: 16px;
 }
-
 .btn-submit:hover {
   background-color: var(--color-brand-dark);
 }
-
 .btn-submit:disabled {
   opacity: 0.6;
   cursor: not-allowed;
@@ -433,7 +425,6 @@ a.button.success:hover {
   font-weight: bold;
   text-decoration: none;
 }
-
 .btn-consultar:hover,
 .enlace-volver:hover {
   text-decoration: underline;
@@ -457,12 +448,10 @@ a.button.success:hover {
   cursor: pointer;
   transition: background-color 0.25s ease, border-color 0.25s ease;
 }
-
 .selector-idioma button:hover,
 .barra-preferencias button:hover {
   border-color: var(--color-brand);
 }
-
 .selector-idioma button[aria-pressed=true],
 .barra-preferencias button[aria-pressed=true] {
   background-color: var(--color-brand);
@@ -566,7 +555,7 @@ a.button.success:hover {
 }
 
 .form-grid .full-width {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
 }
 
 .form-grid p {
@@ -616,7 +605,6 @@ a.button.success:hover {
     padding: 20px 16px;
   }
 }
-
 .mensaje {
   padding: 12px 14px;
   border-radius: 5px;
@@ -819,17 +807,13 @@ tr:nth-child(even) {
 /* Capa que tapa toda la pantalla. Empieza invisible. */
 .pantalla-carga {
   position: fixed;
-  inset: 0;
-  /* top/right/bottom/left = 0 → cubre todo */
-  z-index: 9999;
-  /* por encima de cualquier otro elemento */
+  inset: 0; /* top/right/bottom/left = 0 → cubre todo */
+  z-index: 9999; /* por encima de cualquier otro elemento */
   display: grid;
-  place-items: center;
-  /* centra el contenido en horizontal y vertical */
+  place-items: center; /* centra el contenido en horizontal y vertical */
   background: var(--color-nav);
   opacity: 0;
-  visibility: hidden;
-  /* oculta y no clicable */
+  visibility: hidden; /* oculta y no clicable */
   transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
@@ -841,8 +825,7 @@ tr:nth-child(even) {
 
 .carga-contenido {
   display: flex;
-  flex-direction: column;
-  /* logo, texto y barra apilados */
+  flex-direction: column; /* logo, texto y barra apilados */
   align-items: center;
   gap: 1.5rem;
   padding: 20px;
@@ -872,8 +855,7 @@ tr:nth-child(even) {
 
 .carga-mensaje {
   margin: 0;
-  min-height: 1.5em;
-  /* evita que la barra "salte" al cambiar el texto */
+  min-height: 1.5em; /* evita que la barra "salte" al cambiar el texto */
   color: var(--color-on-dark);
   font-size: 1.1rem;
   font-weight: 500;
@@ -899,8 +881,7 @@ tr:nth-child(even) {
 }
 
 .pantalla-carga.visible .carga-barra-progreso {
-  width: 100%;
-  /* al aparecer, la barra se llena */
+  width: 100%; /* al aparecer, la barra se llena */
 }
 
 @keyframes carga-giro {
@@ -908,20 +889,17 @@ tr:nth-child(even) {
     transform: rotate(360deg);
   }
 }
-
 /* Quien tenga desactivadas las animaciones en su sistema no las verá */
 @media (prefers-reduced-motion: reduce) {
   .carga-spinner::before {
     animation: none;
   }
 }
-
 @media (max-width: 760px) {
   .login-card {
     padding: 28px 20px;
   }
 }
-
 .dashboard-widgets {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -960,7 +938,6 @@ tr:nth-child(even) {
     grid-template-columns: minmax(0, 1fr);
   }
 }
-
 .aula-container {
   margin-bottom: 25px;
   background-color: var(--color-surface);
@@ -998,7 +975,6 @@ tr:nth-child(even) {
     grid-template-columns: minmax(0, 1fr);
   }
 }
-
 .equipo-lista {
   max-width: 800px;
 }
@@ -1063,3 +1039,5 @@ tr:nth-child(even) {
     padding-left: 0;
   }
 }
+
+/*# sourceMappingURL=main.css.map */
